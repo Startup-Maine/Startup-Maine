@@ -7,3 +7,9 @@
 		<?php wp_head()?>
 	</head>
 	<body <?php body_class()?>>
+
+		<?php wp_nav_menu(array(
+			'menu'              => 'banner',
+			'theme_location'    => 'main',
+			'depth'             => 2,
+		))?>

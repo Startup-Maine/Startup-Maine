@@ -9,32 +9,27 @@ $links = array(
 	'subscribe' => 'http://eepurl.com/Sn_TT',
 );
 
-//include files for specific wordpress actions
-$files = scandir(get_stylesheet_directory() . '/actions');
-foreach ($files as $file) {
-	$parts = explode('.', $file);
-	$extension = array_pop($parts);
-	if ($extension == 'php') {
-		$action = implode('.', $parts);
-		add_action($action, function() use ($action) {
+//include wordpress actions from actions folder
+foreach (glob(get_stylesheet_directory() . '/actions/*.php') as $file) {
+	$action = basename($file, '.php');
+	add_action($action, function() use ($action) {
+		require_once('actions/' . $action . '.php');
+	});
+	if (substr($action, 0, 8) == 'wp_ajax_') {
+		add_action('wp_ajax_nopriv_' . substr($action, 8), function() use ($action) {
 			require_once('actions/' . $action . '.php');
 		});
-		if (substr($action, 0, 8) == 'wp_ajax_') {
-			add_action('wp_ajax_nopriv_' . substr($action, 8), function() use ($action) {
-				require_once('actions/' . $action . '.php');
-			});
-		}
 	}
 }
 
-//page slug body class
-add_filter('body_class', function($classes) {
-	global $post;
-	if (isset($post)) {
-		$classes[] = $post->post_type . '-' . $post->post_name;
-	}
-	return $classes;
-});
+//include wordpress filters from filters folder
+foreach (glob(get_stylesheet_directory() . '/filters/*.php') as $file) {
+	$filter = basename($file, '.php');
+	add_action($filter, function($input) use ($filter) {
+		require_once('filters/' . $filter . '.php');
+		return $input;
+	});
+}
 
 //helper function
 function dd($var) {
