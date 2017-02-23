@@ -1,6 +1,6 @@
 <?php
 
-register_nav_menu('main', 'Social Menu');
+register_nav_menu('social', 'Social Menu');
 register_nav_menu('main', 'Header Menu');
 register_nav_menu('footer', 'Tab Menu');
 

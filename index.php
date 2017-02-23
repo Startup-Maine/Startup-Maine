@@ -22,7 +22,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-offset-2 col-lg-8 col-md-9 tagline">
-			<p>Join us to move your business forward, through expert insight, applied skill-building, and meaningful connections.</p>
+			<p><?php echo bloginfo('description')?></p>
 		</div>
 	</div>
 	<div class="triangle">
