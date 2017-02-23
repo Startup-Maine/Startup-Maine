@@ -76,6 +76,10 @@ body {
 		}
 	}
 
+	&.admin-bar nav#utility {
+		top: 32px;
+	}
+
 	div#logo {
 		margin-bottom: 20px;
 		h1 {
