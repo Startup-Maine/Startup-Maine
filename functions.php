@@ -1,13 +1,6 @@
 <?php
 //temporary, will go away soon
-$links = array(
-	'tickets' => 'https://ticketbud.com/events/32582f4c-eb1c-11e6-999e-afbf3b0f7479/register',
-	'email' => 'mailto:info@mainestartupandcreateweek.com',
-	'facebook' => 'https://www.facebook.com/mainestartupandcreateweek',
-	'twitter' => 'https://twitter.com/MaineSCW',
-	'youtube' => 'https://www.youtube.com/channel/UCGCfv9pQb26YnABmw-ISUMQ',
-	'subscribe' => 'http://eepurl.com/Sn_TT',
-);
+$tickets = 'https://ticketbud.com/events/32582f4c-eb1c-11e6-999e-afbf3b0f7479/register';
 
 //include wordpress actions from actions folder
 foreach (glob(get_stylesheet_directory() . '/actions/*.php') as $file) {
@@ -38,6 +31,26 @@ function dd($var) {
 	exit;
 }
 
+function mscw_circle_triangle() {
+	global $tickets;
+	?>
+	<div id="triangle">
+		<div class="shape"></div>
+		<div class="text">
+			June 19–23<br>
+			Portland ME
+			<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
+		</div>
+	</div>
+	<div id="circle">
+		<small>What's New?</small>
+		Just announced: keynote for MSCW 2017, Marvin Ammori. Ammori is General Counsel for Hyperloop One and will be
+		<a href="/whatsnew">[more&hellip;]</a>
+	</div>
+	<?php
+}
+
+//social icons: replace strings with icons
 class mscw_social_icons extends Walker_Nav_Menu {
  
     function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {

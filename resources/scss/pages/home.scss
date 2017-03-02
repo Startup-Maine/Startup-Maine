@@ -26,6 +26,21 @@
     color: $color-blue;
 }
 
+.testimonials {
+	color: $color-black;
+	font-family: $font-regular;
+	font-size: 15px;
+	strong {
+		display: block;
+		font-family: $font-bold;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+	}
+}
+
 @media (min-width: $screen-sm-min) {
     .keynote {
         img {

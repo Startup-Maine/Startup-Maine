@@ -18,16 +18,25 @@
 	<div class="row">
 		<div class="col-md-offset-2 col-lg-8 col-md-9 tagline">
 			<p><?php echo bloginfo('description')?></p>
+			<div class="row testimonials">
+				<?php foreach (array(1, 2) as $num) {?>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-6">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/marvin-ammori-cropped.jpg" width="1333" height="1333" class="img-responsive">
+						</div>
+						<div class="col-md-6">
+							<strong>Testimonial <?php echo $num?></strong>
+							Maine Startup and Create Week is an awesome experience. It really feels intimate and people are willing to help you
+							out with whatever challenge you're facing.
+						</div>
+					</div>
+				</div>
+				<?php }?>
+			</div>
 		</div>
 	</div>
-	<div class="triangle">
-		<div class="shape"></div>
-		<div class="text">
-			June 19–23<br>
-			Portland ME
-			<a href="<?php echo $links['tickets']?>" target="_blank">Reserve Tickets!</a>
-		</div>
-	</div>
+	<?php mscw_circle_triangle()?>
 </div>
 
 <?php get_footer()?>

@@ -17,7 +17,6 @@
 					<?php wp_nav_menu(array(
 						'menu'              => 'banner',
 						'theme_location'    => 'main',
-						'depth'             => 2,
 						'container'			=> null,
 					))?>
 				</div>

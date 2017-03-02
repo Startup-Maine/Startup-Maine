@@ -1,3 +1,17 @@
+		<nav id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8">
+						<?php wp_nav_menu(array(
+							'menu'              => 'footer',
+							'theme_location'    => 'footer',
+							'container'			=> null,
+						))?>
+					</div>
+				</div>
+			</div>
+		</nav>
+
 		<nav id="utility">
 			<div class="container">
 				<div class="row">
@@ -11,7 +25,6 @@
 						<?php wp_nav_menu(array(
 							'menu'              => 'social',
 							'theme_location'    => 'social',
-							'depth'             => 2,
 							'container'			=> null,
 							'walker'				=> new mscw_social_icons()
 						))?>
@@ -19,6 +32,8 @@
 				</div>
 			</div>
 		</nav>
+
 		<?php wp_footer()?>
+
 	</body>
 </html>
