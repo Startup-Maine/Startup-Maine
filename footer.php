@@ -8,13 +8,13 @@
 						<span>Portland, ME</span>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-8 social">
-						<!--
-						<a href="<?php echo $links['subscribe']?>" target="_blank" class="fa fa-envelope"></a>
-						<a href="<?php echo $links['facebook']?>" target="_blank" class="fa fa-facebook"></a>
-						<a href="<?php echo $links['twitter']?>" target="_blank" class="fa fa-twitter"></a>
-						<a href="<?php echo $links['youtube']?>" target="_blank" class="fa fa-youtube-play"></a>
-						<a href="<?php echo $links['email']?>" class="fa fa-question-circle"></a>
-						-->
+						<?php wp_nav_menu(array(
+							'menu'              => 'social',
+							'theme_location'    => 'social',
+							'depth'             => 2,
+							'container'			=> null,
+							'walker'				=> new mscw_social_icons()
+						))?>
 					</div>
 				</div>
 			</div>

@@ -1,11 +1,6 @@
 <?php get_header()?>
 
 <div class="container">
-	<div class="row" id="logo">
-		<div class="col-md-12">
-			<a href="<?php echo $links['tickets']?>" target="_blank"><h1>Maine Startup & Create Week</h1></a>
-		</div>
-	</div>
 	<div class="row">
 		<div class="col-md-offset-2 col-lg-8 col-md-9">
 			<div class="keynote">

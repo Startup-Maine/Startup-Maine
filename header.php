@@ -8,8 +8,19 @@
 	</head>
 	<body <?php body_class()?>>
 
-		<?php wp_nav_menu(array(
-			'menu'              => 'banner',
-			'theme_location'    => 'main',
-			'depth'             => 2,
-		))?>
+		<div class="container">
+			<div class="row" id="banner">
+				<div class="col-md-6">
+					<a href="/" id="logo"><h1>Maine Startup & Create Week</h1></a>
+				</div>
+				<div class="col-md-5">
+					<?php wp_nav_menu(array(
+						'menu'              => 'banner',
+						'theme_location'    => 'main',
+						'depth'             => 2,
+						'container'			=> null,
+					))?>
+				</div>
+			</div>
+		</div>
+
