@@ -1,10 +1,29 @@
-<?php get_header()?>
+<?php
+get_header();
+$active = ' active';
+?>
 
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-1 col-md-10">
 			<div class="keynote">
-				<img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/marvin-ammori-cropped.jpg" width="1333" height="1333" class="img-responsive">
+				<div class="carousel slide" id="home-carousel" data-ride="carousel">
+					<div class="carousel-inner">
+						<?php foreach (glob(get_stylesheet_directory() . '/assets/img/photos/*.jpg') as $image) {?>
+						<div class="item<?php echo $active?>" style="background-image:url(<?php echo get_stylesheet_directory_uri() . '/assets/img/photos/' . basename($image)?>)"></div>
+						<?php
+							$active = '';
+						}?>
+					</div>
+					<a class="left carousel-control" href="#home-carousel" role="button" data-slide="prev">
+						<span class="fa fa-angle-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#home-carousel" role="button" data-slide="next">
+						<span class="fa fa-angle-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
 				<div class="bio">
 					<small>Keynote 1</small>
 					<h3>Marvin Ammori</h3>
@@ -23,7 +42,7 @@
 				<div class="col-md-6 testimonial">
 					<div class="row">
 						<div class="col-xs-6">
-							<img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/marvin-ammori-cropped.jpg" width="1333" height="1333" class="img-responsive">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/photos/marvin-ammori-cropped.jpg" width="1333" height="1333" class="img-responsive">
 						</div>
 						<div class="col-xs-6">
 							<strong>Testimonial <?php echo $num?></strong>

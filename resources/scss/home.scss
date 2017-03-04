@@ -1,0 +1,82 @@
+.keynote {
+	margin-bottom: 40px;
+	background-color: $color-blue;
+	color: $color-white;
+	overflow: auto;
+	.carousel {
+		.item {
+			height: 360px;
+			background-size: cover;
+			background-position: center center;
+		}
+		.carousel-control {
+			span {
+				position: absolute;
+				width: 40px;
+				height: 78px;
+				top: 50%;
+				margin-top: -38px;
+				font-size: 74px;
+				left: 40px;
+			}
+			&.right span {
+				left: auto;
+				right: 40px;
+			}
+		}
+	}
+	.bio {
+		padding: 20px 10px;
+		small { 
+			display: block;
+			font-family: $font-mono;
+			margin: 0 0 15px;
+			text-align: center;
+			text-decoration: underline; 
+		}
+		h3 { 
+			font-family: $font-bold;
+			margin: 0 0 5px; 
+		}
+		h4 { margin: 0 0 5px; }
+	}
+}
+
+.tagline {
+	font-size: 24px;
+	font-family: $font-bold;
+	color: $color-blue;
+	margin-bottom: 25px;
+}
+
+.testimonials {
+	color: $color-black;
+	font-family: $font-regular;
+	font-size: 15px;
+	strong {
+		display: block;
+		font-family: $font-bold;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+	}
+	.testimonial {
+		margin-bottom: 25px;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.keynote {
+		.carousel {
+			float: left;
+			width: 60%;
+			.item { height: 420px; }
+		}
+		.bio {
+			width: 40%;
+			float: left;
+		}
+	}
+}

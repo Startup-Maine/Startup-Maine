@@ -102,6 +102,7 @@ body {
 			bottom: 0;
 			width: 100%;
 			ul#menu-tab-menu {
+				.menu-toggle { cursor: pointer; }
 				.menu-close { display: none; }
 				li { display: none; }
 				&.open {
@@ -171,7 +172,7 @@ body {
 	#triangle {
 		position: absolute;
 		left: -20px;
-		top: 280px;
+		top: 150px;
 		width: $triangle-width * .8;
 		height: $triangle-height * .8;
 		.shape {
@@ -206,8 +207,8 @@ body {
 		display: none;
 	}
 	
-	&.home  { @import 'pages/home.scss';  }
-	&.about { @import 'pages/about.scss'; }
+	&.home   { @import 'home.scss';  }
+	&.page-template-page-yellow { @import 'yellow.scss'; }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -215,7 +216,7 @@ body {
 		padding-top: 70px;
 		#triangle {
 			left: -40px;
-			top: 350px;
+			top: 170px;
 			width: $triangle-width;
 			height: $triangle-height;
 			.shape {
@@ -268,7 +269,7 @@ body {
 					left: auto;
 					right: auto;
 					bottom: auto;
-					.menu-open, .menu-close { display: none; }
+					.menu-toggle { display: none; }
 					li {
 						display: inline-block;
 						a {
