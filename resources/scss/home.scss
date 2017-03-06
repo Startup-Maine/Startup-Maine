@@ -2,7 +2,6 @@
 	margin-bottom: 26px;
 	background-color: $color-blue;
 	color: $color-white;
-	overflow: auto;
 	.carousel {
 		.item {
 			.image {
@@ -24,23 +23,12 @@
 					margin: 0 0 5px; 
 				}
 				h4 { margin: 0 0 5px; }
+				p:last-child { margin-bottom: 0; }
+				&.big { font-size: 24px; }
 			}
+			iframe { width: 100%; height: auto; display: block; }
 		}
-		.carousel-control {
-			span {
-				position: absolute;
-				width: 40px;
-				height: 78px;
-				top: 50%;
-				margin-top: -38px;
-				font-size: 74px;
-				left: 40px;
-			}
-			&.right span {
-				left: auto;
-				right: 40px;
-			}
-		}
+		.carousel-control { display: none; }
 	}
 }
 
@@ -79,6 +67,27 @@
 					width: 40%;
 					height: 100%;
 					float: left;
+				}
+			}
+			.carousel-control {
+				display: block;
+				background: none;
+				color: black;
+				text-shadow: none;
+				width: 100px;
+				left: -100px;
+				span {
+					position: absolute;
+					width: 40px;
+					height: 80px;
+					top: 50%;
+					margin-top: -40px;
+					margin-left: -20px;
+					font-size: 74px;
+				}
+				&.right {
+					left: auto;
+					right: -100px;
 				}
 			}
 		}

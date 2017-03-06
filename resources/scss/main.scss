@@ -61,239 +61,252 @@ body {
 	font-family: $font-regular;
 	padding-top: 90px;
 	padding-bottom: 60px;
-	h1, h2, h3, h4, h5, strong { font-family: $font-bold; }
-	small { font-family: $font-mono; }
-	nav {
-		&#utility {
-			background-color: $color-blue;
-			color: $color-white;
-			font-size: 12px;
-			letter-spacing: 1px;
-			line-height: 2.4;
-			padding-top: 8px;
-			text-transform: uppercase;
-			position: fixed;
-			top: 0; 
-			left: 0;
-			width: 100%; 
-			.where { text-align: right; }
-			.social { text-align: center; }
-			a { 
-				color: $color-white;
-			}
-			#menu-social-menu { 
-				line-height: 1;
-				list-style: none; 
-				padding: 0;
-				margin: 0;
-				display: inline-block;
-				li {
-					float: left;
-					a { 
-						font-size: 24px;
-						&:hover { text-decoration: none; }
-					}
-					& + li {
-						margin-left: 15px;					
-					}
-				}
-			}
-		}
-		&#footer {
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-			ul#menu-tab-menu {
-				.menu-toggle { cursor: pointer; }
-				.menu-close { display: none; }
-				li { display: none; }
-				&.open {
-					.menu-open { display: none; }
-					.menu-close, li { display: block; }
-				}
-				background-color: $color-yellow;
-				list-style: none;
-				padding: 5px 30px; 
-				margin: 0;
-				text-align: center;
-				position: fixed;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				font-family: $font-mono;
-				font-size: 20px;
-				a { color: inherit; }
-			}
-		}
-	}
-
 	&.admin-bar {
 		nav#utility {
 			top: 46px;
 		}
 	}
+	&.home   { @import 'home.scss';  }
+	&.page-template-page-yellow { @import 'yellow.scss'; }
+}
 
-	div#banner {
-		margin-bottom: 20px;
-		#logo h1 {
-			background-image: url(../img/logos/stacked.svg);
-			background-size: contain;
-			width: 250px;
-			height: 134px;
-			background-repeat: no-repeat;
-			text-indent: 100%;
-			margin: 0;
-			white-space: nowrap;
-			overflow: hidden;
+h1, h2, h3, h4, h5, strong { font-family: $font-bold; }
+
+small { font-family: $font-mono; }
+
+nav {
+	&#utility {
+		background-color: $color-blue;
+		color: $color-white;
+		font-size: 12px;
+		letter-spacing: 1px;
+		line-height: 2.4;
+		padding-top: 8px;
+		text-transform: uppercase;
+		position: fixed;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		.where { text-align: right; }
+		.social { text-align: center; }
+		a { 
+			color: $color-white;
 		}
-		#menu-header-menu {
-			list-style: none;
-			padding: 50px 0 0 0;
-			font-size: 1.8rem;
-			font-family: $font-mono;
-			float: right;
+		#menu-social-menu { 
+			line-height: 1;
+			list-style: none; 
+			padding: 0;
+			margin: 0;
+			display: inline-block;
 			li {
 				float: left;
-				a { color: inherit; }
-				&.current_page_item a { text-decoration: underline; }
+				a { 
+					font-size: 24px;
+					&:hover { text-decoration: none; }
+				}
 				& + li {
-					margin-left: 15px;
-					&:before {
-						content: "|";
-						margin-right: 15px;
-					}
+					margin-left: 15px;					
 				}
 			}
 		}
 	}
-
-	.container {
-		position: relative;
-	}
-
-	#triangle {
-		position: absolute;
-		left: -20px;
-		top: 150px;
-		width: $triangle-width * .8;
-		height: $triangle-height * .8;
-		.shape {
-			border-style: solid;
-			border-width: 0 $triangle-width * .8 / 2 $triangle-height * .8;
-			border-color: transparent transparent $color-green transparent;
-			height: 0;
-			width: 0;
-			opacity: .85;
-		}
-		.text {
-			color: $color-white;
-			font-size: 16px;
-			font-family: $font-mono;
-			margin: 0 auto;
-			position: absolute;
+	&#footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		ul#menu-tab-menu {
+			.menu-toggle { cursor: pointer; }
+			.menu-close { display: none; }
+			li { display: none; }
+			&.open {
+				.menu-open { display: none; }
+				.menu-close, li { display: block; }
+			}
+			background-color: $color-yellow;
+			list-style: none;
+			padding: 5px 30px; 
+			margin: 0;
 			text-align: center;
-			top: $triangle-height * .8 / 2;
-			width: 100%;
-			a {
-				display: block; 
-				font-family: $font-bold;
-				color: $color-white;
-				font-size: 20px;
-				margin-top: 20px;
-				text-decoration: underline;
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font-family: $font-mono;
+			font-size: 20px;
+			a { color: inherit; }
+		}
+	}
+}
+
+div#banner {
+	margin-bottom: 20px;
+	#logo h1 {
+		background-image: url(../img/logos/stacked.svg);
+		background-size: contain;
+		width: 250px;
+		height: 134px;
+		background-repeat: no-repeat;
+		text-indent: 100%;
+		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	#menu-header-menu {
+		list-style: none;
+		padding: 50px 0 0 0;
+		font-size: 1.8rem;
+		font-family: $font-mono;
+		float: right;
+		li {
+			float: left;
+			a { color: inherit; }
+			&.current_page_item a { text-decoration: underline; }
+			& + li {
+				margin-left: 15px;
+				&:before {
+					content: "|";
+					margin-right: 15px;
+				}
 			}
 		}
 	}
-	
-	#circle {
-		display: none;
+}
+
+.container {
+	position: relative;
+}
+
+#triangle {
+	position: absolute;
+	left: -20px;
+	top: 150px;
+	width: $triangle-width * .8;
+	height: $triangle-height * .8;
+	.shape {
+		border-style: solid;
+		border-width: 0 $triangle-width * .8 / 2 $triangle-height * .8;
+		border-color: transparent transparent $color-green transparent;
+		height: 0;
+		width: 0;
+		opacity: .85;
 	}
-	
-	&.home   { @import 'home.scss';  }
-	&.page-template-page-yellow { @import 'yellow.scss'; }
+	.text {
+		color: $color-white;
+		font-size: 16px;
+		font-family: $font-mono;
+		margin: 0 auto;
+		position: absolute;
+		text-align: center;
+		top: $triangle-height * .8 / 2;
+		width: 100%;
+		a {
+			display: block; 
+			font-family: $font-bold;
+			color: $color-white;
+			font-size: 20px;
+			margin-top: 20px;
+			text-decoration: underline;
+		}
+	}
+}
+
+#circle {
+	display: none;
 }
 
 @media (min-width: $screen-sm-min) {
 	body {
 		padding-top: 70px;
-		#triangle {
-			left: -20px;
-			top: 200px;
-			width: $triangle-width;
-			height: $triangle-height;
-			.shape {
-				border-width: 0 $triangle-width / 2 $triangle-height;
-			}
-			.text {
-				font-size: 18px;
-				top: $triangle-height / 2;
-				a { font-size: 24px; }
-			}
+		&.admin-bar nav#utility {
+			top: 32px;
 		}
-		#circle {
-			display: block;
+	}
+	#triangle {
+		left: -20px;
+		top: 180px;
+		width: $triangle-width;
+		height: $triangle-height;
+		.shape {
+			border-width: 0 $triangle-width / 2 $triangle-height;
+		}
+		.text {
+			font-size: 18px;
+			top: $triangle-height / 2;
+			a { font-size: 24px; }
+		}
+	}
+	#circle {
+		display: block;
+		position: absolute;
+		right: -20px;
+		top: 260px;
+		width: $circle-width;
+		height: $circle-width;
+		border-radius: $circle-width / 2;
+		background-color: $color-pink;
+		padding: $circle-width / 5;
+		font-size: 17px;
+		font-family: $font-bold;
+		small {
+			font-family: $font-mono;
+			font-size: 14px;
 			position: absolute;
-			right: -20px;
-			top: 260px;
-			width: $circle-width;
-			height: $circle-width;
-			border-radius: $circle-width / 2;
-			background-color: $color-pink;
-			padding: $circle-width / 5;
-			font-size: 17px;
-			font-family: $font-bold;
-			small {
-				font-family: $font-mono;
-				font-size: 14px;
-				position: absolute;
-				left: $circle-width / 5;
-				right: $circle-width / 5;
-				top: ($circle-width / 5) - 24;
-				text-align: center;
-			}
-			a {
-				font-size: 9px;
-				font-family: $font-mono;
-				color: inherit;
+			left: $circle-width / 5;
+			right: $circle-width / 5;
+			top: ($circle-width / 5) - 24;
+			text-align: center;
+		}
+		a {
+			font-size: 9px;
+			font-family: $font-mono;
+			color: inherit;
+		}
+	}
+	nav {
+		&#utility {
+			text-align: left;
+			padding-bottom: 5px;
+			#menu-social-menu { 
+				float: right;
 			}
 		}
-		nav {
-			&#utility {
-				text-align: left;
-				padding-bottom: 5px;
-				#menu-social-menu { 
-					float: right;
-				}
-			}
-			&#footer {
-				ul#menu-tab-menu {
-					position: static;
-					left: auto;
-					right: auto;
-					bottom: auto;
-					font-size: 17px;
-					.menu-toggle { display: none; }
-					li {
-						display: inline-block;
-						a {
-							color: inherit;
-							text-transform: uppercase;
-							letter-spacing: 2px;
-							padding: 0 10px;
-						}
-						& + li {
-							padding-left: 0;
-							&:before { 
-								content: "|"; 
-								margin-right: 10px;
-							}
+		&#footer {
+			ul#menu-tab-menu {
+				position: static;
+				left: auto;
+				right: auto;
+				bottom: auto;
+				font-size: 17px;
+				.menu-toggle { display: none; }
+				li {
+					display: inline-block;
+					a {
+						color: inherit;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						padding: 0 10px;
+					}
+					& + li {
+						padding-left: 0;
+						&:before { 
+							content: "|"; 
+							margin-right: 10px;
 						}
 					}
 				}
 			}
 		}
-		&.admin-bar nav#utility {
-			top: 32px;
-		}
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	#triangle {
+		top: 205px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	#triangle {
+		top: 310px;
 	}
 }
