@@ -1,13 +1,30 @@
 .keynote {
-	margin-bottom: 40px;
+	margin-bottom: 26px;
 	background-color: $color-blue;
 	color: $color-white;
 	overflow: auto;
 	.carousel {
 		.item {
-			height: 360px;
-			background-size: cover;
-			background-position: center center;
+			.image {
+				height: 360px;
+				background-size: cover;
+				background-position: center center;
+			}
+			.caption {
+				padding: 20px 10px;
+				small { 
+					display: block;
+					font-family: $font-mono;
+					margin: 0 0 15px;
+					text-align: center;
+					text-decoration: underline; 
+				}
+				h3 { 
+					font-family: $font-bold;
+					margin: 0 0 5px; 
+				}
+				h4 { margin: 0 0 5px; }
+			}
 		}
 		.carousel-control {
 			span {
@@ -25,38 +42,19 @@
 			}
 		}
 	}
-	.bio {
-		padding: 20px 10px;
-		small { 
-			display: block;
-			font-family: $font-mono;
-			margin: 0 0 15px;
-			text-align: center;
-			text-decoration: underline; 
-		}
-		h3 { 
-			font-family: $font-bold;
-			margin: 0 0 5px; 
-		}
-		h4 { margin: 0 0 5px; }
-	}
 }
 
 .tagline {
 	font-size: 24px;
-	font-family: $font-bold;
 	color: $color-blue;
 	margin-bottom: 25px;
+	strong { display: block; }
 }
 
 .testimonials {
 	color: $color-black;
-	font-family: $font-regular;
 	font-size: 15px;
-	strong {
-		display: block;
-		font-family: $font-bold;
-	}
+	strong { display: block; }
 	img {
 		width: 100%;
 		height: auto;
@@ -70,13 +68,31 @@
 @media (min-width: $screen-sm-min) {
 	.keynote {
 		.carousel {
-			float: left;
-			width: 60%;
-			.item { height: 420px; }
+			.item { 
+				height: 405px; 
+				.image {
+					float: left;
+					height: 100%;
+					width: 60%;
+				}
+				.caption {
+					width: 40%;
+					height: 100%;
+					float: left;
+				}
+			}
 		}
-		.bio {
-			width: 40%;
-			float: left;
-		}
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.keynote .carousel .item {
+		height: 438px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.keynote .carousel .item {
+		height: 532px;
 	}
 }

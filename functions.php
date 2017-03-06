@@ -42,12 +42,14 @@ function mscw_circle_triangle() {
 			<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
 		</div>
 	</div>
+	<?php
+	/*
 	<div id="circle">
 		<small>What's New?</small>
 		Just announced: keynote for MSCW 2017, Marvin Ammori. Ammori is General Counsel for Hyperloop One and will be
 		<a href="/whatsnew">[more&hellip;]</a>
 	</div>
-	<?php
+	*/
 }
 
 //social icons: replace strings with icons

@@ -13,8 +13,8 @@ $font-mono:			'Monosten-C';
 $font-regular:		'Sailec-Regular';
 
 //dimensions
-$triangle-width:		330px;
-$triangle-height:	280px;
+$triangle-width:		280px;
+$triangle-height:	240px;
 $circle-width:		280px;
 
 //imports
@@ -61,6 +61,8 @@ body {
 	font-family: $font-regular;
 	padding-top: 90px;
 	padding-bottom: 60px;
+	h1, h2, h3, h4, h5, strong { font-family: $font-bold; }
+	small { font-family: $font-mono; }
 	nav {
 		&#utility {
 			background-color: $color-blue;
@@ -215,8 +217,8 @@ body {
 	body {
 		padding-top: 70px;
 		#triangle {
-			left: -40px;
-			top: 170px;
+			left: -20px;
+			top: 200px;
 			width: $triangle-width;
 			height: $triangle-height;
 			.shape {
@@ -269,6 +271,7 @@ body {
 					left: auto;
 					right: auto;
 					bottom: auto;
+					font-size: 17px;
 					.menu-toggle { display: none; }
 					li {
 						display: inline-block;
