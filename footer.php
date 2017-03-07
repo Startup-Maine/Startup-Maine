@@ -2,7 +2,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-offset-1 col-md-10">
-						<?php wp_nav_menu(array(
+						<?php /* wp_nav_menu(array(
 							'menu'              => 'footer',
 							'theme_location'    => 'footer',
 							'container'			=> null,
@@ -11,7 +11,7 @@
 								<div class="menu-toggle menu-open"><i class="fa fa-bars"></i> Menu</div>
 								<div class="menu-toggle menu-close"><i class="fa fa-times"></i> Close</div>
 								</ul>',
-						))?>
+						)) */?>
 					</div>
 				</div>
 			</div>

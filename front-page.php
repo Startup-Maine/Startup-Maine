@@ -36,7 +36,7 @@
 							</div>
 						</div>
 						<div class="item">
-							<iframe width="945" height="532" src="https://www.youtube.com/embed/0R305euPnSw?enablejsapi=1" id="ytplayer" frameborder="0" allowfullscreen></iframe>
+							<iframe width="945" height="532" src="https://www.youtube.com/embed/0R305euPnSw?enablejsapi=1&rel=0" id="ytplayer" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
 					<a class="left carousel-control" href="#home-carousel" role="button" data-slide="prev">
