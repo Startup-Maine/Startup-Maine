@@ -20,14 +20,13 @@
 							<div class="image" style="background-image:url(/wp-content/themes/mscw/assets/img/carousel/02-attendees.jpg)"></div>
 							<div class="caption big">
 								<p>“Entrepreneurs converge on the city to network and learn new skills.”</p>
-								<p>– Portland Press Herald</p>
+								<p class="source">– Portland Press Herald</p>
 							</div>
 						</div>
 						<div class="item">
 							<div class="image" style="background-image:url(/wp-content/themes/mscw/assets/img/carousel/03-lunch.jpg)"></div>
 							<div class="caption big">
-								<p>“Entrepreneurs converge on the city to network and learn new skills.”</p>
-								<p>– Portland Press Herald</p>
+								<p>75+ Events over 5 days! A game-changing week of thoughtful speakers, passionate discussion, A-ha! moments, and genuine connections.</p>
 							</div>
 						</div>
 						<div class="item">
@@ -37,7 +36,7 @@
 							</div>
 						</div>
 						<div class="item">
-							<iframe width="945" height="532" src="https://www.youtube.com/embed/0R305euPnSw" frameborder="0" allowfullscreen></iframe>
+							<iframe width="945" height="532" src="https://www.youtube.com/embed/0R305euPnSw?enablejsapi=1" id="ytplayer" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
 					<a class="left carousel-control" href="#home-carousel" role="button" data-slide="prev">
