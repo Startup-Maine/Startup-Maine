@@ -301,12 +301,14 @@ div#banner {
 
 @media (min-width: $screen-md-min) {
 	#triangle {
-		top: 205px;
+		top: 215px;
+		left: 60px;
 	}
 }
 
 @media (min-width: $screen-lg-min) {
 	#triangle {
+		left: -20px;
 		top: 310px;
 	}
 }
