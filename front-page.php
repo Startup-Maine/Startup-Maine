@@ -92,58 +92,55 @@
 				<div class="tier">
 					<small>Presenting Donors</small>
 					<div class="row"><!--
-						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/decd.jpg" alt="decd" width="967" height="808" class="img-responsive"></div><!--
-						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/meca.png" alt="meca" width="1151" height="600" class="img-responsive"></div><!--
-						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/mti.jpg" alt="mti" width="168" height="86" class="img-responsive"></div><!--
 						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/preti-flaherty.jpg" alt="preti-flaherty" width="1081" height="180" class="img-responsive"></div><!--
-						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/red-thread-turnstone.jpg" alt="red-thread-turnstone" width="950" height="184" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/mti.jpg" alt="mti" width="1329" height="726" class="img-responsive"></div><!--
+					--></div>
+				</div>
+				<div class="tier">
+					<small>Partner Donor</small>
+					<div class="row"><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/red-thread.jpg" alt="red-thread" width="1946" height="603" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/meca.png" alt="meca" width="19" height="600" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/knack-factory.jpg" alt="knack-factory" width="2118" height="883" class="img-responsive"></div><!--
+					--></div>
+				</div>
+				<div class="tier">
+					<small>Presenting Media Sponsor</small>
+					<div class="row"><!--
+					--></div>
+				</div>
+				<div class="tier">
+					<small>Platinum</small>
+					<div class="row"><!--
+							--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/idexx.png" alt="wex" width="426" height="78" class="img-responsive"></div><!--
 						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/wex.png" alt="wex" width="156" height="156" class="img-responsive"></div><!--
 					--></div>
 				</div>
 				<div class="tier">
-					<small>Presenting Donors</small>
-					<div class="row">
-					</div>
-				</div>
-				<div class="tier">
-					<small>Partner Donor</small>
-					<div class="row">
-					</div>
-				</div>
-				<div class="tier">
-					<small>Presenting Media Sponsor</small>
-					<div class="row">
-					</div>
-				</div>
-				<div class="tier">
-					<small>Platinum</small>
-					<div class="row">
-					</div>
-				</div>
-				<div class="tier">
 					<small>Gold</small>
-					<div class="row">
-					</div>
+					<div class="row"><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/decd.jpg" alt="decd" width="967" height="808" class="img-responsive"></div><!--
+					--></div>
 				</div>
 				<div class="tier">
 					<small>Silver</small>
-					<div class="row">
-					</div>
+					<div class="row"><!--
+					--></div>
 				</div>
 				<div class="tier">
 					<small>Bronze</small>
-					<div class="row">
-					</div>
+					<div class="row"><!--
+					--></div>
 				</div>
 				<div class="tier">
 					<small>Lightning</small>
-					<div class="row">
-					</div>
+					<div class="row"><!--
+					--></div>
 				</div>
 				<div class="tier">
 					<small>Expo Donor</small>
-					<div class="row">
-					</div>
+					<div class="row"><!--
+					--></div>
 				</div>
 			</div>
 		</div>
