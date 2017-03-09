@@ -107,6 +107,7 @@
 				<div class="tier">
 					<small>Presenting Media Sponsor</small>
 					<div class="row"><!--
+						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/maine-mag.jpg" alt="maine-mag" width="628" height="215" class="img-responsive"></div><!--
 					--></div>
 				</div>
 				<div class="tier">
@@ -120,26 +121,6 @@
 					<small>Gold</small>
 					<div class="row"><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/decd.jpg" alt="decd" width="967" height="808" class="img-responsive"></div><!--
-					--></div>
-				</div>
-				<div class="tier">
-					<small>Silver</small>
-					<div class="row"><!--
-					--></div>
-				</div>
-				<div class="tier">
-					<small>Bronze</small>
-					<div class="row"><!--
-					--></div>
-				</div>
-				<div class="tier">
-					<small>Lightning</small>
-					<div class="row"><!--
-					--></div>
-				</div>
-				<div class="tier">
-					<small>Expo Donor</small>
-					<div class="row"><!--
 					--></div>
 				</div>
 			</div>
