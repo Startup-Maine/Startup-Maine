@@ -7,7 +7,7 @@
 				<div class="carousel slide" id="home-carousel" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<div class="image" style="background-image:url(/wp-content/themes/mscw/assets/img/carousel/01-marvin-ammori.jpg)"></div>
+							<div class="image" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/01-marvin-ammori.jpg)"></div>
 							<div class="caption">
 								<small>Keynote 1</small>
 								<h3>Marvin Ammori</h3>
@@ -17,20 +17,20 @@
 							</div>
 						</div>
 						<div class="item">
-							<div class="image" style="background-image:url(/wp-content/themes/mscw/assets/img/carousel/02-attendees.jpg)"></div>
+							<div class="image" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/02-attendees.jpg)"></div>
 							<div class="caption big">
 								<p>“Entrepreneurs converge on the city to network and learn new skills.”</p>
 								<p class="source">– Portland Press Herald</p>
 							</div>
 						</div>
 						<div class="item">
-							<div class="image" style="background-image:url(/wp-content/themes/mscw/assets/img/carousel/03-lunch.jpg)"></div>
+							<div class="image" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/03-lunch.jpg)"></div>
 							<div class="caption big">
 								<p>75+ Events over 5 days! A game-changing week of thoughtful speakers, passionate discussion, A-ha! moments, and genuine connections.</p>
 							</div>
 						</div>
 						<div class="item">
-							<div class="image" style="background-image:url(/wp-content/themes/mscw/assets/img/carousel/04-landscape.png)"></div>
+							<div class="image" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/04-landscape.png)"></div>
 							<div class="caption big">
 								<p>One of the best parts of Maine Startup and Create Week? Maine! Come early or stay late to enjoy the legendary Maine summer.</p>
 							</div>
@@ -82,6 +82,72 @@
 		</div>
 	</div>
 	<?php mscw_circle_triangle()?>
+</div>
+
+<div class="sponsors">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10">
+				<h3>Thank you to our sponsors!</h3>
+				<div class="tier">
+					<small>Presenting Donors</small>
+					<div class="row"><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/decd.jpg" alt="decd" width="967" height="808" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/meca.png" alt="meca" width="1151" height="600" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/mti.jpg" alt="mti" width="168" height="86" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/preti-flaherty.jpg" alt="preti-flaherty" width="1081" height="180" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/red-thread-turnstone.jpg" alt="red-thread-turnstone" width="950" height="184" class="img-responsive"></div><!--
+						--><div class="col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/wex.png" alt="wex" width="156" height="156" class="img-responsive"></div><!--
+					--></div>
+				</div>
+				<div class="tier">
+					<small>Presenting Donors</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Partner Donor</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Presenting Media Sponsor</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Platinum</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Gold</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Silver</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Bronze</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Lightning</small>
+					<div class="row">
+					</div>
+				</div>
+				<div class="tier">
+					<small>Expo Donor</small>
+					<div class="row">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php get_footer()?>
