@@ -97,7 +97,7 @@
 					--></div>
 				</div>
 				<div class="tier">
-					<small>Partner Donor</small>
+					<small>Partner Donors</small>
 					<div class="row"><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/red-thread.jpg" alt="red-thread" width="1946" height="603" class="img-responsive"></div><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/meca.png" alt="meca" width="19" height="600" class="img-responsive"></div><!--
