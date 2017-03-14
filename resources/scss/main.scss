@@ -62,16 +62,16 @@ body {
 	font-size: 15px;
 	&.admin-bar {
 		div#wpadminbar { position: fixed; }
-		nav#utility { top: 46px; }
+		#utility { top: 46px; }
 	}
 	&.home   { @import 'home.scss';  }
-	&.page-template-page-yellow, &.blog { 
+	&.page-template-page-yellow, &.blog, &.single-post { 
 		background-color: $color-yellow;
 		#content {
 			padding-top: 50px;
 		}
 	}
-	&.blog {
+	&.blog, &.single-post {
 		.post {
 			padding-top: 10px;
 			padding-bottom: 10px;
@@ -82,6 +82,11 @@ body {
 			h3 { text-transform: uppercase; }
 		}
 	}
+}
+
+a { 
+	color: inherit; 
+	&:hover { color: inherit; }
 }
 
 h1, h2, h3, h4, h5, strong { font-family: $font-bold; }
@@ -234,10 +239,10 @@ nav {
 
 @media (min-width: $screen-sm-min) {
 	body {
-		&.admin-bar nav#utility {
+		&.admin-bar #utility {
 			top: 32px;
 		}
-		&.page-template-page-yellow nav#footer, &.blog nav#footer {
+		&.page-template-page-yellow #footer, &.blog #footer, &.single-post #footer {
 			position: static;
 			background-color: $color-gray;
 		}

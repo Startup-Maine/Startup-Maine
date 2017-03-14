@@ -14,7 +14,7 @@
 						</div>
 						<div class="col-md-9">
 							<small><?php the_date('m.d.y')?></small>
-							<h3><?php the_title()?></h3>
+							<h3><a href="<?php the_permalink()?>"><?php the_title()?></a></h3>
 							<?php the_excerpt()?>
 						</div>
 					</div>
