@@ -73,10 +73,12 @@ body {
 	}
 	&.blog {
 		.post {
+			padding-top: 10px;
+			padding-bottom: 10px;
 			border-top: 1px solid black;
-			border-bottom: 1px solid black;
-			padding-top: 5px;
-			padding-bottom: 5px;
+			&:last-child {
+				border-bottom: 1px solid black;
+			}
 			h3 { text-transform: uppercase; }
 		}
 	}
