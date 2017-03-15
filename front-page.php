@@ -7,7 +7,7 @@
 				<div class="carousel slide" id="home-carousel" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<div class="image" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/05-mscw-tour.jpg)"></div>
+							<div class="image" style="background-image:url(<?php echo get_stylesheet_directory_uri()?>/assets/img/carousel/05-mscw-boston.jpg)"></div>
 							<div class="caption big">
 								<p>Maine Startup & Create is coming to Boston! Meet Maine's coolest entrepreneurs, one night only: March 23 at RedThread, Boston.</p>
 								<p class="source"><a href="https://www.eventbrite.com/e/maine-startup-and-create-tour-tickets-31393278140">Get Tickets Now!</a></p>
