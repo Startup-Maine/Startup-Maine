@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'font-bold';
+	src: url('../fonts/32F6BB_0_0.eot');
+	src: url('../fonts/32F6BB_0_0.eot?#iefix')	format('embedded-opentype'),
+		 url('../fonts/32F6BB_0_0.woff2')		format('woff2'),
+		 url('../fonts/32F6BB_0_0.woff')			format('woff'),
+		 url('../fonts/32F6BB_0_0.ttf')			format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+ 
+@font-face {
+	font-family: 'font-regular';
+	src: url('../fonts/32F6BB_1_0.eot');
+	src: url('../fonts/32F6BB_1_0.eot?#iefix')	format('embedded-opentype'),
+		 url('../fonts/32F6BB_1_0.woff2')		format('woff2'),
+		 url('../fonts/32F6BB_1_0.woff')			format('woff'),
+		 url('../fonts/32F6BB_1_0.ttf')			format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+ 
+@font-face {
+	font-family: 'font-mono';
+	src: url('../fonts/monosten-c.eot');
+	src: url('../fonts/monosten-c.eot?#iefix')	format('embedded-opentype'),
+		 url('../fonts/monosten-c.woff')			format('woff'),
+		 url('../fonts/monosten-c.woff2')		format('woff2'),
+		 url('../fonts/monosten-c.ttf')			format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

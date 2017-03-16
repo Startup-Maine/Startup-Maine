@@ -1,8 +1,5 @@
 jQuery(function($){
-	$('ul#menu-tab-menu').on('click', '.menu-toggle', function(){
-		$(this).parent().toggleClass('open');
-	});
-	
+	//youtube on homepage
 	YTdeferred.done(function(YT) {
 		player = new YT.Player('ytplayer', {
 			events: {
@@ -20,6 +17,7 @@ jQuery(function($){
 	});
 });
 
+//youtube on homepage
 var player = null;
 var YTdeferred = jQuery.Deferred();
 window.onYouTubeIframeAPIReady = function() {

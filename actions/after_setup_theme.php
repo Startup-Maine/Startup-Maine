@@ -8,4 +8,5 @@ add_theme_support('title-tag');
 //add_image_size('speakers', 640, 640, true);
 
 //custom editor, using the main stylesheet for this
+add_editor_style(get_stylesheet_directory_uri() . '/assets/styles/fonts.css');
 add_editor_style(get_stylesheet_uri());

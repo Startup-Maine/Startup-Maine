@@ -1,4 +1,9 @@
-		</div>
+<?php
+global $tickets;
+$latest = current(get_posts(array('numberposts' => 1)));
+?>
+
+			</div>
 		
 		<nav id="utility">
 			<div class="container">
@@ -21,6 +26,20 @@
 			</div>
 		</nav>
 
+		<div id="triangle" class="draggable">
+			<div class="shape"></div>
+			<div class="text">
+				June 19–23<br>
+				Portland ME
+				<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
+			</div>
+		</div>
+
+		<div id="circle" class="draggable">
+			<small>What's New?</small>
+			<a href="<?php echo get_the_permalink($latest)?>"><?php echo get_the_title($latest)?></a>
+		</div>
+	
 		<?php wp_footer()?>
 
 	</body>

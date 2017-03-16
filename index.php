@@ -22,7 +22,6 @@
 			<?php }?>
 		</div>
 	</div>
-	<?php mscw_circle_triangle()?>
 </div>
 
 <?php get_footer()?>

@@ -31,25 +31,6 @@ function dd($var) {
 	exit;
 }
 
-function mscw_circle_triangle() {
-	global $tickets;
-	?>
-	<div id="triangle">
-		<div class="shape"></div>
-		<div class="text">
-			June 19–23<br>
-			Portland ME
-			<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
-		</div>
-	</div>
-	<div id="circle">
-		<small>What's New?</small>
-		Just announced: keynote for MSCW 2017, Marvin Ammori. Ammori is General Counsel for Hyperloop One and will be
-		<a href="/whatsnew">[more&hellip;]</a>
-	</div>
-	<?php
-}
-
 //social icons: replace strings with icons
 class mscw_social_icons extends Walker_Nav_Menu {
  

@@ -88,7 +88,6 @@
 			</div>
 		</div>
 	</div>
-	<?php mscw_circle_triangle()?>
 </div>
 
 <div class="sponsors">

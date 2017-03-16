@@ -7,39 +7,6 @@ Version: 1.0
 Text Domain: mscw
 */
 
-@font-face {
-	font-family: 'font-bold';
-	src: url('assets/fonts/32F6BB_0_0.eot');
-	src: url('assets/fonts/32F6BB_0_0.eot?#iefix')	format('embedded-opentype'),
-		 url('assets/fonts/32F6BB_0_0.woff2')		format('woff2'),
-		 url('assets/fonts/32F6BB_0_0.woff')			format('woff'),
-		 url('assets/fonts/32F6BB_0_0.ttf')			format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
- 
-@font-face {
-	font-family: 'font-regular';
-	src: url('assets/fonts/32F6BB_1_0.eot');
-	src: url('assets/fonts/32F6BB_1_0.eot?#iefix')	format('embedded-opentype'),
-		 url('assets/fonts/32F6BB_1_0.woff2')		format('woff2'),
-		 url('assets/fonts/32F6BB_1_0.woff')			format('woff'),
-		 url('assets/fonts/32F6BB_1_0.ttf')			format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
- 
-@font-face {
-	font-family: 'font-mono';
-	src: url('assets/fonts/monosten-c.eot');
-	src: url('assets/fonts/monosten-c.eot?#iefix')	format('embedded-opentype'),
-		 url('assets/fonts/monosten-c.woff')			format('woff'),
-		 url('assets/fonts/monosten-c.woff2')		format('woff2'),
-		 url('assets/fonts/monosten-c.ttf')			format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
 	background: rgb(234, 234, 234);
 	font-family: 'font-regular';
@@ -60,7 +27,9 @@ h2, h5 { font-weight: normal; }
 h1, h2, h3, h4, h5, p { margin: 0 0 20px; }
 
 h1, h2 { font-size: 20pt; }
+
 h3 { font-size: 16pt; }
-h4 { font-size: 12pt; text-transform: uppercase; }
+
+h4 { font-size: 12pt; text-transform: uppercase; margin: 0; }
 
 small { font-family: 'font-mono'; }

@@ -20,9 +20,12 @@
 				}
 				h3 { 
 					font-family: 'font-bold';
-					margin: 0 0 5px; 
+					margin: 0 0 5px;
 				}
-				h4 { margin: 0 0 5px; }
+				h4 {
+					margin: 0 0 5px;
+					text-transform: none;
+				}
 				p:last-child { margin-bottom: 0; }
 				p.source { font-size: 12px; }
 				&.big { font-size: 24px; }
@@ -86,8 +89,6 @@
 		&:last-child { border-bottom: 0; }
 	}
 }
-
-
 
 @media (min-width: $screen-sm-min) {
 	.keynote {

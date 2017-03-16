@@ -13,7 +13,6 @@ the_post();
 			<?php the_content()?>
 		</div>
 	</div>
-	<?php mscw_circle_triangle()?>
 </div>
 
 <?php
