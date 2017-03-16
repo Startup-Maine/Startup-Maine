@@ -6,30 +6,3 @@ Author URI: https://better-yet.com/
 Version: 1.0
 Text Domain: mscw
 */
-
-body {
-	background: rgb(234, 234, 234);
-	font-family: 'font-regular';
-	font-size: 12pt;
-}
-
-body.page-template-page-yellow, body.blog, body.single-post {
-	background-color: rgb(247, 228,  99);;
-}
-
-a { color: inherit; }
-a:hover { color: inherit; }
-
-h1, h3, h4, strong { font-family: 'font-bold'; font-weight: normal; }
-
-h2, h5 { font-weight: normal; }
-
-h1, h2, h3, h4, h5, p { margin: 0 0 20px; }
-
-h1, h2 { font-size: 20pt; }
-
-h3 { font-size: 16pt; }
-
-h4 { font-size: 12pt; text-transform: uppercase; margin: 0; }
-
-small { font-family: 'font-mono'; }

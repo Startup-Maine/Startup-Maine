@@ -7,7 +7,6 @@ wp_enqueue_script('jqueryui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.j
 //only load youtube on homepage
 if (is_home()) {
 	wp_enqueue_script('youtube', 'https://www.youtube.com/iframe_api', array(), null, true);
-	wp_enqueue_script('mscw-youtube', get_stylesheet_directory_uri() . '/assets/scripts/youtube.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/scripts/youtube.js'), true);
 }
 
 /*

@@ -1,0 +1,27 @@
+//basic typography that also goes in editor-style
+
+body {
+	background: $color-gray;
+	font-family: 'font-regular';
+	font-size: 12pt;
+	&.page-template-page-yellow, &.blog, &.single-post {
+		background-color: $color-yellow;
+	}
+}
+
+a { 
+	color: inherit; 
+	&:hover { color: inherit; }
+}
+
+h1, h3, h4, strong { font-family: 'font-bold'; font-weight: normal; }
+
+h2, h5 { font-weight: normal; }
+
+h1, h2, h3, h4, h5, p { margin: 0 0 20px; }
+
+h1, h2 { font-size: 20pt; }
+h3 { font-size: 16pt; }
+h4 { font-size: 12pt; text-transform: uppercase; }
+
+small { font-family: 'font-mono'; }
