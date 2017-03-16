@@ -13,7 +13,7 @@ the_post();
 					</div>
 					<div class="col-md-9">
 						<small><?php the_date('m.d.y')?></small>
-						<h3><?php the_title()?></h3>
+						<h4><?php the_title()?></h4>
 						<?php the_content()?>
 					</div>
 				</div>

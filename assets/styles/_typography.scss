@@ -14,14 +14,48 @@ a {
 	&:hover { color: inherit; }
 }
 
-h1, h3, h4, strong { font-family: 'font-bold'; font-weight: normal; }
+small {
+	font-family: 'font-mono';
+}
 
-h2, h5 { font-weight: normal; }
+strong {
+	font-family: 'font-bold';
+	font-weight: normal;
+}
 
-h1, h2, h3, h4, h5, p { margin: 0 0 20px; }
+p {
+	margin: 0 0 20px; 
+}
 
-h1, h2 { font-size: 20pt; }
-h3 { font-size: 16pt; }
-h4 { font-size: 12pt; text-transform: uppercase; }
+h1 {
+	font-family: 'font-bold';
+	font-weight: normal;
+	font-size: 20pt;
+	margin: 0 0 20px; 
+}
 
-small { font-family: 'font-mono'; }
+h2 {
+	font-weight: normal;
+	font-size: 20pt;
+	margin: 0 0 20px; 
+}
+
+h3 {
+	font-family: 'font-bold';
+	font-weight: normal;
+	font-size: 16pt;
+	margin: 0;
+}
+
+h4 {
+	font-family: 'font-bold';
+	font-weight: normal;
+	font-size: 12pt;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid black;
+}

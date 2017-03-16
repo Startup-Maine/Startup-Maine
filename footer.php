@@ -36,8 +36,9 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		</div>
 
 		<div id="circle" class="draggable">
+			<div class="shape"></div>
 			<small>What's New?</small>
-			<a href="<?php echo get_the_permalink($latest)?>"><?php echo get_the_title($latest)?></a>
+			<a href="<?php echo get_the_permalink($latest)?>"><span><?php echo get_the_title($latest)?></span></a>
 		</div>
 	
 		<?php wp_footer()?>

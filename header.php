@@ -10,9 +10,9 @@
 		
 		<div id="header">
 			<div class="container">
-				<div class="row" id="banner">
+				<div class="row">
 					<div class="col-md-6">
-						<a href="/" id="logo"><h1>Maine Startup & Create Week</h1></a>
+						<a href="/"><h1 id="logo">Maine Startup & Create Week</h1></a>
 					</div>
 					<div class="col-md-5">
 						<?php /*echo wp_nav_menu(array(

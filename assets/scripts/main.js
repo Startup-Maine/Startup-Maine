@@ -1,9 +1,16 @@
 jQuery(function($){
+	
+	//bottom form css helper for mobile
 	$('ul#menu-tab-menu').on('click', '.menu-toggle', function(){
 		$(this).parent().toggleClass('open');
 	});
+
+	//submitting a form in a new window isn't kosher on ios
+	if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+		$('#header form').removeAttr('target');
+	}
 	
-	//get circle	 and triangle
+	//get circle	 and triangle coordinates
 	if (coordinates = Cookies.get('mscw_triangle')) {
 		coordinates = coordinates.split(',');
 		$('#triangle').css({left:coordinates[0] + 'px', top:coordinates[1] + 'px'});

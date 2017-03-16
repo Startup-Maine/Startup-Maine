@@ -84,53 +84,51 @@ nav {
 }
 
 #header {
-	padding-top: 96px;
+	padding-top: 88px;
 	background-color: $color-gray;
-	#banner {
-		margin-bottom: 20px;
-		#logo h1 {
-			background-image: url(../img/logos/stacked.svg);
-			background-size: contain;
-			width: 250px;
-			height: 134px;
-			background-repeat: no-repeat;
-			text-indent: 100%;
-			margin: 0;
-			white-space: nowrap;
-			overflow: hidden;
-		}
-		#menu-header-menu {
-			list-style: none;
-			padding: 40px 0 0 0;
-			font-size: 1.8rem;
-			font-family: 'font-mono';
-			float: right;
-			clear: right; 
-			li {
-				float: left;
-				a { color: inherit; }
-				&.current_page_item a { text-decoration: underline; }
-				& + li {
-					margin-left: 15px;
-					&:before {
-						content: "|";
-						margin-right: 15px;
-					}
+	#logo {
+		background-image: url(../img/logos/stacked.svg);
+		background-size: contain;
+		width: 250px;
+		height: 134px;
+		background-repeat: no-repeat;
+		text-indent: 100%;
+		margin: 8px 0 20px; //top margin here to align with bottom of form on desktop
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	#menu-header-menu {
+		list-style: none;
+		padding: 20px 0 0 0;
+		margin: 0 0 20px;
+		font-size: 1.8rem;
+		font-family: 'font-mono';
+		float: right;
+		clear: right; 
+		li {
+			float: left;
+			a { color: inherit; }
+			&.current_page_item a { text-decoration: underline; }
+			& + li {
+				margin-left: 15px;
+				&:before {
+					content: "|";
+					margin-right: 15px;
 				}
 			}
 		}
-		form {
-			float: right; 
+	}
+	form {
+		float: right; 
+		font-size: 10pt;
+		color: darken($color-gray, 40%);
+		input#receive_updates {
 			font-size: 10pt;
-			color: darken($color-gray, 40%);
-			input {
-				font-size: 10pt;
-				background-color: lighten($color-gray, 3%);
-				border: 0;
-				border-bottom: 1px solid darken($color-gray, 20%);
-				padding: 10px 3px 3px;
-				margin-left: 10px;
-			}
+			background-color: lighten($color-gray, 3%);
+			border: 0;
+			border-bottom: 1px solid darken($color-gray, 20%);
+			padding: 10px 3px 3px;
+			margin-left: 10px;
 		}
 	}
 }
@@ -143,11 +141,13 @@ nav {
 	&.loaded {
 		opacity: 1;
 	}
+	.shape { opacity: .8; }
+	&:hover .shape { opacity: 1; }
 }
 
 #triangle {
 	left: -20px;
-	top: 150px;
+	bottom: 150px;
 	width: $triangle-width * .8;
 	height: $triangle-height * .8;
 	.shape {
@@ -156,7 +156,6 @@ nav {
 		border-color: transparent transparent $color-green transparent;
 		height: 0;
 		width: 0;
-		opacity: .85;
 	}
 	.text {
 		color: $color-white;
@@ -193,11 +192,10 @@ nav {
 		}
 	}
 	#header {
-		padding-top: 70px;
+		padding-top: 62px;
+		#menu-header-menu { padding-top: 40px; }
 	}
 	#triangle {
-		left: -20px;
-		top: 180px;
 		width: $triangle-width;
 		height: $triangle-height;
 		.shape {
@@ -216,11 +214,32 @@ nav {
 		width: $circle-width;
 		height: $circle-width;
 		border-radius: $circle-width / 2;
-		background-color: $color-pink;
-		padding: $circle-width / 5;
-		font-size: 19px;
-		font-family: 'font-bold';
 		overflow: hidden;
+		.shape {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: $color-pink;
+		}
+		a {
+			position: absolute;
+			left: $circle-width / 5;
+			right: $circle-width / 5;
+			top: $circle-width / 5;
+			bottom: $circle-width / 5;
+			font-size: 19px;
+			font-family: 'font-bold';
+			overflow: hidden;
+			text-align: center;
+			line-height: $circle-width * 3 / 5;
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+			}
+		}
 		small {
 			font-family: 'font-mono';
 			font-size: 14px;
@@ -276,15 +295,7 @@ nav {
 }
 
 @media (min-width: $screen-md-min) {
-	#triangle {
-		top: 215px;
-		left: 60px;
-	}
 }
 
 @media (min-width: $screen-lg-min) {
-	#triangle {
-		left: -20px;
-		top: 310px;
-	}
 }
