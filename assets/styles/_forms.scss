@@ -1,6 +1,6 @@
 //gravity forms
 
-.gform_wrapper {
+.wpcf7 {
 	margin-bottom: 50px;
 	h3.gform_title {
 		text-decoration: underline;
@@ -8,24 +8,33 @@
 		font-size: inherit;
 		cursor: pointer;
 	}
-	ul.gform_fields {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li {
-			margin-bottom: 20px;
-			&:last-child { margin-bottom: 5px; }
-		}
-	}
 	input, textarea {
 		background-color: lighten($color-yellow, 10%);
 		border: 0;
-		&.gform_button {
+		display: block;
+		margin-left: 100px;
+		&.wpcf7-submit {
 			border: 1px solid black;
 			padding: 4px 10px 2px;
 			text-transform: uppercase;
 			background: none;
 			font-family: 'font-mono';
 		}
+	}
+	.wpcf7-response-output {
+		margin: 0 0 20px;
+		background: black;
+		color: white;
+		border: 0;
+		padding: 10px 10px 7px;
+	}
+	legend {
+		cursor: pointer;
+		text-transform: uppercase;
+		border: 0;
+		padding: 0;
+		font-size: inherit;
+		&:before { content: "[ "; }
+		&:after { content: " ]"; }
 	}
 }

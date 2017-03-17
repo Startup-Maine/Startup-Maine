@@ -1,5 +1,15 @@
 //basic typography that also goes in editor-style
 
+a { 
+	color: inherit; 
+	&:hover { color: inherit; }
+}
+
+b, strong {
+	font-family: 'font-bold';
+	font-weight: normal;
+}
+
 body {
 	background: $color-gray;
 	font-family: 'font-regular';
@@ -7,24 +17,6 @@ body {
 	&.page-template-page-yellow, &.blog, &.single-post {
 		background-color: $color-yellow;
 	}
-}
-
-a { 
-	color: inherit; 
-	&:hover { color: inherit; }
-}
-
-small {
-	font-family: 'font-mono';
-}
-
-strong {
-	font-family: 'font-bold';
-	font-weight: normal;
-}
-
-p {
-	margin: 0 0 20px; 
 }
 
 h1 {
@@ -58,4 +50,12 @@ h4 {
 hr {
 	border: 0;
 	border-top: 1px solid black;
+}
+
+p {
+	margin: 0 0 20px; 
+}
+
+small {
+	font-family: 'font-mono';
 }

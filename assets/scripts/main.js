@@ -32,6 +32,11 @@ jQuery(function($){
 		}
 	}).addClass('loaded');
 	
+	//togglable forms
+	$('.wpcf7').on('click', 'legend', function(){
+		$(this).next('section').toggleClass('hidden');
+	});
+	
 	//youtube on homepage
 	YTdeferred.done(function(YT) {
 		player = new YT.Player('ytplayer', {

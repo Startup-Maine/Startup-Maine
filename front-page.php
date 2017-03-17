@@ -127,6 +127,7 @@
 					<small>Gold</small>
 					<div class="row"><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/decd.jpg" alt="decd" width="967" height="808" class="img-responsive"></div><!--
+						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/memic.png" alt="memic" width="525" height="111" class="img-responsive"></div><!--
 					--></div>
 				</div>
 			</div>
