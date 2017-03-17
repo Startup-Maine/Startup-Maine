@@ -1,6 +1,12 @@
 //styles for home page
 
 body.home {
+	background-color: white;
+	
+	.hero {
+		background-color: $color-gray;	
+	}
+	
 	.keynote {
 		margin-bottom: 26px;
 		background-color: $color-blue;
@@ -61,7 +67,6 @@ body.home {
 	}
 	
 	.sponsors {
-		background-color: #ffffff;
 		padding: 50px 0 60px;
 		color: $color-blue;
 		h3 { margin: 0 0 20px 0; }

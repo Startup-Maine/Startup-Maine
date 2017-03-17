@@ -1,8 +1,14 @@
 //basic typography that also goes in editor-style
 
 a { 
-	color: inherit; 
-	&:hover { color: inherit; }
+	font-family: 'font-bold';
+	font-weight: normal;
+	color: $color-blue; 
+	cursor: pointer;
+	&:hover { 
+		color: $color-blue;
+		text-decoration: underline;
+	}
 }
 
 b, strong {

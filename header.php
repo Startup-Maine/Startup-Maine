@@ -8,7 +8,7 @@
 	</head>
 	<body <?php body_class()?>>
 		
-		<div id="header">
+		<header>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -33,7 +33,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</header>
 
 		<nav id="footer">
 			<div class="container">
@@ -54,4 +54,4 @@
 			</div>
 		</nav>
 
-		<div id="content">
+		<main id="content">

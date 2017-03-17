@@ -76,14 +76,16 @@ nav {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			font-family: 'font-mono';
-			font-size: 20px;
-			a { color: inherit; }
+			a { 
+				font-size: 20px;
+				font-family: 'font-mono';
+				color: inherit; 
+			}
 		}
 	}
 }
 
-#header {
+header {
 	padding-top: 88px;
 	background-color: $color-gray;
 	#logo {
@@ -101,13 +103,15 @@ nav {
 		list-style: none;
 		padding: 20px 0 0 0;
 		margin: 0 0 20px;
-		font-size: 1.8rem;
-		font-family: 'font-mono';
 		float: right;
 		clear: right; 
 		li {
 			float: left;
-			a { color: inherit; }
+			a {
+				color: inherit;
+				font-size: 1.8rem;
+				font-family: 'font-mono';
+			}
 			&.current_page_item a { text-decoration: underline; }
 			& + li {
 				margin-left: 15px;
@@ -130,6 +134,16 @@ nav {
 			padding: 10px 3px 3px;
 			margin-left: 10px;
 		}
+	}
+}
+
+footer {
+	p {
+		border-top: 	1px solid black;
+		font-size: 10pt;
+		margin: 50px 0 0;
+		padding: 15px 0 80px;
+		text-align: center;
 	}
 }
 
@@ -191,7 +205,7 @@ nav {
 			background-color: $color-gray;
 		}
 	}
-	#header {
+	header {
 		padding-top: 62px;
 		#menu-header-menu { padding-top: 40px; }
 	}
@@ -234,10 +248,14 @@ nav {
 			overflow: hidden;
 			text-align: center;
 			line-height: $circle-width * 3 / 5;
+			color: inherit;
 			span {
 				display: inline-block;
 				vertical-align: middle;
 				line-height: normal;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 		small {
@@ -268,12 +286,12 @@ nav {
 				left: auto;
 				right: auto;
 				bottom: auto;
-				font-size: 17px;
 				.menu-toggle { display: none; }
 				li {
 					display: inline-block;
 					a {
 						color: inherit;
+						font-size: 17px;
 						text-transform: uppercase;
 						letter-spacing: 2px;
 						padding: 0 10px;
