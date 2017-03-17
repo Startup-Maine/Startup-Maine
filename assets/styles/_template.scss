@@ -12,9 +12,6 @@ body {
 				padding-top: 10px;
 				padding-bottom: 10px;
 				border-top: 1px solid black;
-				&:last-child {
-					border-bottom: 1px solid black;
-				}
 				h3 { text-transform: uppercase; }
 			}
 		}
