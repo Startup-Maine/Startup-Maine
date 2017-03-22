@@ -1,7 +1,4 @@
 <?php
-/*
-Template Name: Yellow
-*/
 get_header();
 the_post();
 ?>
