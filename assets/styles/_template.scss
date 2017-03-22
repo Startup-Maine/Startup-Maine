@@ -5,7 +5,7 @@ body {
 		div#wpadminbar { position: fixed; }
 		#utility { top: 46px; }
 	}
-	&.page-template-page-yellow, &.blog, &.single-post { 
+	&.page, &.blog, &.single-post { 
 		#content {
 			padding-top: 50px;
 			.post {
@@ -197,7 +197,7 @@ footer {
 		&.admin-bar #utility {
 			top: 32px;
 		}
-		&.page-template-page-yellow #footer, &.blog #footer, &.single-post #footer {
+		&.page #footer, &.blog #footer, &.single-post #footer {
 			position: static;
 			background-color: $color-gray;
 		}
