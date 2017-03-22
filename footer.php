@@ -39,8 +39,8 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		<div id="triangle" class="draggable">
 			<div class="shape"></div>
 			<div class="text">
-				June 19–23<br>
-				Portland ME
+				50% discount<br>
+				through 3/26
 				<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
 			</div>
 		</div>
@@ -48,6 +48,7 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		<div id="circle" class="draggable">
 			<div class="shape"></div>
 			<small>What's New?</small>
+			<span class="move">Move Me!</span>
 			<a href="<?php echo get_the_permalink($latest)?>"><span><?php echo get_the_title($latest)?></span></a>
 		</div>
 		
