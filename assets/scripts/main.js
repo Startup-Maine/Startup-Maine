@@ -33,9 +33,13 @@ jQuery(function($){
 	}).addClass('loaded');
 	
 	//togglable forms
-	$('.wpcf7').on('click', 'legend', function(){
-		$(this).next('section').toggleClass('hidden');
+	$('.wpcf7-submit').wrap('<span class="wpcf7-form-control-wrap"/>');
+	$('.wpcf7-form-control-wrap').each(function(){
+		var class_names = $(this).children().first().attr('class');
+		class_names = class_names.replace('wpcf7-form-control ', '');
+		$(this).addClass(class_names);
 	});
+	$('.wpcf7').addClass('loaded');
 	
 	//youtube on homepage
 	YTdeferred.done(function(YT) {

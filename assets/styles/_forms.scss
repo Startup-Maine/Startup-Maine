@@ -1,19 +1,25 @@
 //gravity forms
 
 .wpcf7 {
-	margin-bottom: 50px;
-	h3.gform_title {
-		text-decoration: underline;
-		font-family: 'font-regular';
-		font-size: inherit;
-		cursor: pointer;
+	padding: 0 15px 50px;
+	opacity: 0;
+	transition: opacity .1s linear;
+	
+	.wpcf7-form {
+		margin: 0 -15px;
 	}
+	
 	input, textarea {
 		background-color: lighten($color-yellow, 10%);
 		border: 0;
 		display: block;
-		margin-left: 100px;
+		height: 40px;
+		width: 100%;
+		&[type="checkbox"], &[type="submit"] {
+			width: auto;
+		}
 		&.wpcf7-submit {
+			width: auto;
 			border: 1px solid black;
 			padding: 4px 10px 2px;
 			text-transform: uppercase;
@@ -21,6 +27,38 @@
 			font-family: 'font-mono';
 		}
 	}
+	
+	textarea { height: 100px; }
+
+	p { margin: 0; overflow: auto; }
+
+	.wpcf7-form-control-wrap {
+		display: block;
+		float: left;
+		margin-bottom: 15px;
+		padding: 0 15px;
+		&.wpcf7-text {
+			width: 50%;
+		}
+		&.wpcf7-textarea, &.wpcf7-checkbox, &.wpcf7-checkbox {
+			width: 100%;	
+		}
+	}
+	
+	.wpcf7-checkbox {
+		margin-left: -15px;
+		margin-right: -15px;
+		span.wpcf7-list-item {
+			float: left;
+			width: 25%;
+			padding: 0 15px;
+			margin: 0;
+			label { display: block; overflow: auto; }
+			input { float: left; height: auto; margin: 1px 5px 0 0; }
+			span { float: left; }
+		}
+	}
+	
 	.wpcf7-response-output {
 		margin: 0 0 20px;
 		background: black;
@@ -28,13 +66,8 @@
 		border: 0;
 		padding: 10px 10px 7px;
 	}
-	legend {
-		cursor: pointer;
-		text-transform: uppercase;
-		border: 0;
-		padding: 0;
-		font-size: inherit;
-		&:before { content: "[ "; }
-		&:after { content: " ]"; }
+
+	&.loaded {
+		opacity: 1;
 	}
 }
