@@ -201,6 +201,9 @@ footer {
 			position: static;
 			background-color: $color-gray;
 		}
+		&.home #footer{
+			position: fixed;
+		}
 	}
 	header {
 		padding-top: 62px;
@@ -300,7 +303,7 @@ footer {
 							margin-right: 10px;
 						}
 					}
-					&.current_page_item a {
+					&.current_page_item a, &.current-page-ancestor a {
 						text-decoration: underline;
 					}
 				}
