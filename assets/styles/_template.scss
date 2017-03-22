@@ -201,8 +201,9 @@ footer {
 			position: static;
 			background-color: $color-gray;
 		}
-		&.home #footer{
+		&.home #footer {
 			position: fixed;
+			background-color: $color-white;
 		}
 	}
 	header {
