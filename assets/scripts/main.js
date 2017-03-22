@@ -58,6 +58,31 @@ jQuery(function($){
 		});
 	});
 	
+	//smooth scroll anchor links
+	$('body').on('click', 'a', function(event) {
+		
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+			//prevent default anchor click behavior
+			event.preventDefault();
+			
+			//store hash
+			var hash = this.hash;
+			
+			var top = $(hash).offset().top - ($('nav#utility').offset().top + $('nav#utility').height());
+			
+			console.log('top is ' + top);
+			
+			//if ($(body))
+			
+			//scroll			
+			$('html, body').animate({ scrollTop: top }, 400, function(){
+				window.location.hash = hash;
+			});
+		}
+	});
+	
+	
 });
 
 //youtube on homepage
