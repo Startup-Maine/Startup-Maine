@@ -60,11 +60,12 @@
 	}
 	
 	.wpcf7-response-output {
-		margin: 0 0 20px;
+		margin: 15px 15px 20px;
 		background: black;
 		color: white;
 		border: 0;
 		padding: 10px 10px 7px;
+		clear: left;
 	}
 
 	&.loaded {
