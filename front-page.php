@@ -121,7 +121,7 @@
 				<div class="tier">
 					<small>Platinum</small>
 					<div class="row"><!--
-						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/idexx.png" alt="wex" width="426" height="78" class="img-responsive"></div><!--
+						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/idexx.png" alt="idexx" width="426" height="78" class="img-responsive"></div><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/wex.png" alt="wex" width="156" height="156" class="img-responsive"></div><!--
 					--></div>
 				</div>
@@ -130,6 +130,13 @@
 					<div class="row"><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/decd.jpg" alt="decd" width="967" height="808" class="img-responsive"></div><!--
 						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/memic.png" alt="memic" width="525" height="111" class="img-responsive"></div><!--
+					--></div>
+				</div>
+				<div class="tier">
+					<small>Silver</small>
+					<div class="row"><!--
+						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/fame.png" alt="fame" width="1024" height="323" class="img-responsive"></div><!--
+						--><div class="col-xs-12 col-md-3"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/img/sponsors/eaton-peabody.png" alt="eaton-peabody" width="1024" height="329" class="img-responsive"></div><!--
 					--></div>
 				</div>
 			</div>
