@@ -59,7 +59,10 @@ jQuery(function($){
 	});
 	
 	//smooth scroll anchor links
-	$('body').on('click', 'a', function(event) {
+	$('#content').on('click', 'a', function(event) {
+		
+		//don't do this for home page carousel controls
+		if ($(this).hasClass('carousel-control')) return;
 		
 		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
@@ -70,11 +73,7 @@ jQuery(function($){
 			var hash = this.hash;
 			
 			var top = $(hash).offset().top - ($('nav#utility').offset().top + $('nav#utility').height());
-			
-			console.log('top is ' + top);
-			
-			//if ($(body))
-			
+						
 			//scroll			
 			$('html, body').animate({ scrollTop: top }, 400, function(){
 				window.location.hash = hash;
