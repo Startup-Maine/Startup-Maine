@@ -59,3 +59,31 @@ register_post_type('mscw_carousel',
 		//'rewrite'		=> array('slug'=>'speakers'),
 	)
 );
+
+register_post_type('mscw_sponsor',
+	array(
+		'labels'		=> array(
+			'name'					=> 'Sponsors',
+			'singular_name'			=> 'Sponsor',
+			'add_new_item'			=> 'Add Sponsor',
+			'edit_item'				=> 'Edit Sponsor',
+			'new_item'				=> 'New Sponsor',
+			'view_item'				=> 'View Sponsor',
+			'view_items'				=> 'View Sponsors',
+			'search_items'			=> 'Search Sponsors',
+			'not_found'				=> 'No sponsors added yet.',
+			'not_found_in_trash'		=> 'No sponsors found in Trash',
+			'all_items'				=> 'All Sponsor',
+			'archives'				=> 'Sponsor Archives',
+			'attributes'				=> 'Sponsor Attributes',
+			'insert_into_item'		=> 'Insert into sponsor',
+			'uploaded_to_this_item'	=> 'Uploaded to this sponsor',
+			
+		),
+		'supports'		=> array('title', 'thumbnail'),
+		'show_ui'		=> true,
+		'has_archive'	=> false,
+		'menu_icon'		=> 'dashicons-awards',
+		//'rewrite'		=> array('slug'=>'speakers'),
+	)
+);
