@@ -7,42 +7,39 @@ body.home {
 		background-color: $color-gray;	
 	}
 	
-	.keynote {
+	.carousel {
 		margin-bottom: 26px;
 		background-color: $color-blue;
 		color: $color-white;
-		.carousel {
-			.item {
-				.image {
-					height: 360px;
-					background-size: cover;
-					background-position: center center;
-				}
-				.caption {
-					padding: 20px 10px;
-					small { 
-						display: block;
-						font-family: 'font-mono';
-						margin: 0 0 15px;
-						text-align: center;
-						text-decoration: underline; 
-					}
-					h3 { 
-						font-family: 'font-bold';
-						margin: 0 0 5px;
-					}
-					h4 {
-						margin: 0 0 5px;
-						text-transform: none;
-					}
-					p:last-child { margin-bottom: 0; }
-					p.source { font-size: 12px; }
-					&.big { font-size: 24px; }
-				}
-				iframe { width: 100%; height: auto; display: block; }
+		.item {
+			.image {
+				height: 360px;
+				background-size: cover;
+				background-position: center center;
 			}
-			.carousel-control { display: none; }
+			.caption {
+				padding: 20px 10px;
+				small { 
+					display: block;
+					font-family: 'font-mono';
+					margin: 0 0 15px;
+					text-align: center;
+					text-decoration: underline; 
+				}
+				h3 { 
+					font-family: 'font-bold';
+					margin: 0 0 5px;
+				}
+				h4 {
+					margin: 0 0 5px;
+					text-transform: none;
+				}
+				a { color: white; }
+				p:last-child { margin-bottom: 0; }
+			}
+			iframe { width: 100%; height: auto; display: block; }
 		}
+		.carousel-control { display: none; }
 	}
 	
 	.tagline {
@@ -103,56 +100,54 @@ body.home {
 	}
 	
 	@media (min-width: $screen-sm-min) {
-		.keynote {
-			.carousel {
-				.item { 
-					height: 405px; 
-					.image {
-						float: left;
-						height: 100%;
-						width: 60%;
-					}
-					.caption {
-						width: 40%;
-						height: 100%;
-						float: left;
-					}
-					iframe { height: 405px; }
+		.carousel {
+			.item { 
+				height: 405px; 
+				.image {
+					float: left;
+					height: 100%;
+					width: 60%;
 				}
-				.carousel-control {
-					display: block;
-					background: none;
-					color: black;
-					text-shadow: none;
-					width: 100px;
-					left: -100px;
-					span {
-						position: absolute;
-						width: 40px;
-						height: 80px;
-						top: 50%;
-						margin-top: -40px;
-						margin-left: -20px;
-						font-size: 74px;
-					}
-					&.right {
-						left: auto;
-						right: -100px;
-					}
+				.caption {
+					width: 40%;
+					height: 100%;
+					float: left;
+				}
+				iframe { height: 405px; }
+			}
+			.carousel-control {
+				display: block;
+				background: none;
+				color: black;
+				text-shadow: none;
+				width: 100px;
+				left: -100px;
+				span {
+					position: absolute;
+					width: 40px;
+					height: 80px;
+					top: 50%;
+					margin-top: -40px;
+					margin-left: -20px;
+					font-size: 74px;
+				}
+				&.right {
+					left: auto;
+					right: -100px;
 				}
 			}
 		}
 	}
 	
 	@media (min-width: $screen-md-min) {
-		.keynote .carousel .item {
+		.carousel .item {
 			height: 438px;
 			iframe { height: 438px; }
 		}
 	}
 	
 	@media (min-width: $screen-lg-min) {
-		.keynote .carousel .item {
+		.carousel .item {
 			height: 532px;
 			iframe { height: 532px; }
 		}
