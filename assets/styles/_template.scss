@@ -123,6 +123,7 @@ header {
 		float: right; 
 		font-size: 10pt;
 		color: darken($color-gray, 40%);
+		overflow: hidden;
 		input#receive_updates {
 			font-size: 10pt;
 			background-color: lighten($color-gray, 3%);
@@ -130,6 +131,9 @@ header {
 			border-bottom: 1px solid darken($color-gray, 20%);
 			padding: 10px 3px 3px;
 			margin-left: 10px;
+		}
+		input#submit {
+			margin-left: -1000px;
 		}
 	}
 }
