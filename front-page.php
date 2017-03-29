@@ -105,7 +105,7 @@
 						<small><?php echo $tier?></small>
 						<div class="row"><!--
 						<?php foreach ($sponsors as $sponsor) {?>
-							--><div class="col-xs-12 col-md-3"><a href="<?php echo $sponsor['url']?>" title="<?php echo $sponsor['title']?>"><?php echo $sponsor['image']?></a></div><!--
+							--><div class="col-xs-12 col-md-3"><a href="<?php echo $sponsor['url']?>" title="<?php echo $sponsor['title']?>" target="_blank"><?php echo $sponsor['image']?></a></div><!--
 						<?php }?>
 						--></div>
 					</div>
