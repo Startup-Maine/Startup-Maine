@@ -20,11 +20,9 @@
 							'theme_location'    => 'main',
 							'container'			=> null,
 						))*/?>
-						<form method="get" target="_blank" action="https://mainestartupandcreateweek.us8.list-manage.com/subscribe">
-							<input type="hidden" name="u" value="be23ad41095e0f44c873a7220">
-							<input type="hidden" name="id" value="dc4a0f2b2f">
+						<form action="http://www.mailonthemark.net/t/r/s/uluubk/" method="post" target="_blank">
 							<label for="receive_updates">Receive Updates!</label>
-							<input type="email" name="MERGE0" id="receive_updates">
+							<input id="receive_updates" name="cm-uluubk-uluubk" type="email" required>
 						</form>
 						<ul id="menu-header-menu">
 							<li><a href="http://www.mainestartupandcreateweek.com/2016/">MSCW 2016</a></li>
