@@ -23,6 +23,7 @@
 						<form action="http://www.mailonthemark.net/t/r/s/uluubk/" method="post" target="_blank">
 							<label for="receive_updates">Receive Updates!</label>
 							<input id="receive_updates" name="cm-uluubk-uluubk" type="email" required>
+							<input type="submit" style="margin-left: -1000px">
 						</form>
 						<ul id="menu-header-menu">
 							<li><a href="http://www.mainestartupandcreateweek.com/2016/">MSCW 2016</a></li>
