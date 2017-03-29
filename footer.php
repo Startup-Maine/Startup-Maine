@@ -39,8 +39,8 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		<div id="triangle" class="draggable">
 			<div class="shape"></div>
 			<div class="text">
-				50% discount<br>
-				through 3/26
+				35% discount<br>
+				through 4/23
 				<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
 			</div>
 		</div>
