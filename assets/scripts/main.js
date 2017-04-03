@@ -5,10 +5,10 @@ jQuery(function($){
 		$(this).parent().toggleClass('open');
 	});
 
-	//if not ios, open form in new tab
+	/*if not ios, open form in new tab
 	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
-		$('#header form').attr('target', '_blank');
-	}
+		$('header form').attr('target', '_blank');
+	}*/
 		
 	//get circle	 and triangle coordinates
 	if (coordinates = Cookies.get('mscw_triangle')) {

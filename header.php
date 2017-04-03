@@ -20,7 +20,7 @@
 							'theme_location'    => 'main',
 							'container'			=> null,
 						))*/?>
-						<form action="http://www.mailonthemark.net/t/r/s/uluubk/" method="post">
+						<form action="https://mainestartupandcreateweek.createsend.com/t/r/s/uluubk/" method="post">
 							<label for="receive_updates">Receive Updates!</label>
 							<input id="receive_updates" name="cm-uluubk-uluubk" type="email" required>
 							<input type="submit" id="submit">
