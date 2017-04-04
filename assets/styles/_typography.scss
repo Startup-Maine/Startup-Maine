@@ -20,7 +20,7 @@ body {
 	background: $color-gray;
 	font-family: 'font-regular';
 	font-size: 12pt;
-	&.page, &.blog, &.single-post {
+	&.page, &.blog, &.single-post, &.post-type-page {
 		background-color: $color-yellow;
 	}
 }

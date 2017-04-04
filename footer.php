@@ -3,7 +3,7 @@ global $tickets;
 $latest = current(get_posts(array('numberposts' => 1)));
 ?>
 
-		</div>
+		</main>
 		
 		<footer>
 			<div class="container">
