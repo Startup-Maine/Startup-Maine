@@ -25,6 +25,27 @@ body.post-type-archive-mscw_session {
 	
 	.schedule {
 		color: $color-blue;
+		
+		.slot {
+			border-top: 1px solid $color-blue;
+			padding-left: 200px;
+			overflow: auto;
+			position: relative;
+			h4 { margin-bottom: 10px; }
+			.info {
+				position: absolute;
+				left: 0;
+				top: 7px;
+			}
+			.session {
+				background-color: lighten($color-blue, 40%);
+				height: 100px;
+				padding: 5px;
+				width: 120px;
+				float: left; 
+				margin: 7px;
+			}
+		}
 	}
 	
 }

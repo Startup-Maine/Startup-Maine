@@ -1,9 +1,11 @@
 <?php
 
+//register menus
 register_nav_menu('social', 'Social Menu');
 register_nav_menu('main', 'Header Menu');
 register_nav_menu('footer', 'Tab Menu');
 
+//register custom post types
 register_post_type('mscw_carousel',
 	array(
 		'labels'		=> array(
@@ -63,7 +65,6 @@ register_post_type('mscw_session',
 	array(
 		'labels'		=> array(
 			'name'					=> 'Sessions',
-			'menu_name'				=> 'Program',
 			'singular_name'			=> 'Session',
 			'add_new_item'			=> 'Add Session',
 			'edit_item'				=> 'Edit Session',
@@ -88,33 +89,3 @@ register_post_type('mscw_session',
 		'rewrite'		=> array('slug'=>'program'),
 	)
 );
-
-register_post_type('mscw_presenter',
-	array(
-		'labels'		=> array(
-			'name'					=> 'Presenters',
-			'menu_name'				=> 'People',
-			'singular_name'			=> 'Presenter',
-			'add_new_item'			=> 'Add Presenter',
-			'edit_item'				=> 'Edit Presenter',
-			'new_item'				=> 'New Presenter',
-			'view_item'				=> 'View Presenter',
-			'view_items'				=> 'View Presenters',
-			'search_items'			=> 'Search Presenter',
-			'not_found'				=> 'No presenters added yet.',
-			'not_found_in_trash'		=> 'No presenters found in Trash',
-			'all_items'				=> 'All Presenters',
-			'archives'				=> 'Presenter Archives',
-			'attributes'				=> 'Presenter Attributes',
-			'insert_into_item'		=> 'Insert into presenter',
-			'uploaded_to_this_item'	=> 'Uploaded to this presenter',
-			
-		),
-		'supports'		=> array('title', 'thumbnail', 'editor'),
-		'show_ui'		=> true,
-		'has_archive'	=> true,
-		'menu_icon'		=> 'dashicons-groups',
-		'rewrite'		=> array('slug'=>'people'),
-	)
-);
-
