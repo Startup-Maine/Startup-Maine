@@ -21,7 +21,7 @@ foreach (glob(get_stylesheet_directory() . '/filters/*.php') as $file) {
 	add_action($filter, function($input) use ($filter) {
 		require_once('filters/' . $filter . '.php');
 		return $input;
-	});
+	}, 10, 2);
 }
 
 //helper function
