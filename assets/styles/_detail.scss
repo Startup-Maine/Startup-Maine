@@ -1,0 +1,35 @@
+body.single-mscw_session, body.author {
+	
+	.detail {
+		background-color: $color-blue;
+		color: $color-white;
+		padding: 20px 15px;
+		
+		h1 {
+			margin-bottom: 10px;
+		}
+		
+		.meta {
+			font-size: 11pt;
+			margin-bottom: 20px; 
+			small {
+				font-size: 100%; 
+				margin-left: 15px;
+			}
+		}
+
+		a { color: $color-white; }
+		
+		.meta a {
+			display: block; margin-bottom: 3px;
+		}
+		
+		.more-details {
+			margin-top: 30px;
+		}
+		
+		.presenter img { margin-bottom: 10px; }
+		
+	}
+	
+}
