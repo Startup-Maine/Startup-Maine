@@ -6,7 +6,7 @@ register_nav_menu('main', 'Header Menu');
 register_nav_menu('footer', 'Tab Menu');
 
 //register custom post types
-register_post_type('mscw_carousel',
+register_post_type('carousel',
 	array(
 		'labels'		=> array(
 			'name'					=> 'Carousel Items',
@@ -34,7 +34,7 @@ register_post_type('mscw_carousel',
 	)
 );
 
-register_post_type('mscw_sponsor',
+register_post_type('sponsor',
 	array(
 		'labels'		=> array(
 			'name'					=> 'Sponsors',
@@ -61,7 +61,7 @@ register_post_type('mscw_sponsor',
 	)
 );
 
-register_post_type('mscw_session',
+register_post_type('session',
 	array(
 		'labels'		=> array(
 			'name'					=> 'Sessions',
@@ -87,5 +87,34 @@ register_post_type('mscw_session',
 		'has_archive'	=> true,
 		'menu_icon'		=> 'dashicons-schedule',
 		'rewrite'		=> array('slug'=>'program'),
+	)
+);
+
+register_post_type('speaker',
+	array(
+		'labels'		=> array(
+			'name'					=> 'Speakers',
+			'singular_name'			=> 'Speaker',
+			'add_new_item'			=> 'Add Speaker',
+			'edit_item'				=> 'Edit Speaker',
+			'new_item'				=> 'New Speaker',
+			'view_item'				=> 'View Speaker',
+			'view_items'				=> 'View Speakers',
+			'search_items'			=> 'Search Speakers',
+			'not_found'				=> 'No speakers added yet.',
+			'not_found_in_trash'		=> 'No speakers found in Trash',
+			'all_items'				=> 'All Speakers',
+			'archives'				=> 'Speaker Archives',
+			'attributes'				=> 'Speaker Attributes',
+			'insert_into_item'		=> 'Insert into speaker',
+			'uploaded_to_this_item'	=> 'Uploaded to this speaker',
+			
+		),
+		'supports'		=> array('title', 'editor', 'thumbnail'),
+		'show_ui'		=> true,
+		'public'			=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-groups',
+		'rewrite'		=> array('slug'=>'people'),
 	)
 );

@@ -1,20 +1,18 @@
-body.single-mscw_session, body.author {
+body.single-session, body.single-speaker {
 	
 	.detail {
 		background-color: $color-blue;
 		color: $color-white;
 		padding: 20px 15px;
-		
-		h1 {
-			margin-bottom: 10px;
-		}
-		
+				
 		.meta {
 			font-size: 11pt;
 			margin-bottom: 20px; 
+			span {
+				margin-right: 15px;
+			}
 			small {
 				font-size: 100%; 
-				margin-left: 15px;
 			}
 		}
 

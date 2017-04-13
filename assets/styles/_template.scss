@@ -6,8 +6,8 @@ body {
 		#utility { top: 46px; }
 	}
 	&.page, &.blog, &.single-post { 
-		#content {
-			padding-top: 50px;
+		main {
+			color: inherit;
 			.post {
 				padding-top: 10px;
 				padding-bottom: 10px;
@@ -136,6 +136,12 @@ header {
 			margin-left: -1000px;
 		}
 	}
+}
+
+main {
+	color: $color-blue;
+	padding-top: 30px;
+	min-height: 400px;
 }
 
 footer {

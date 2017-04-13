@@ -31,6 +31,15 @@ function dd($var) {
 	exit;
 }
 
+//get the thumnail (or a fallback) for a speaker
+function mscw_speaker_img($speaker_id) {
+	if ($image = get_the_post_thumbnail($speaker_id, 'large', array('class' => 'img-responsive'))) {
+		return $image;
+	} else {
+		return '<img src="https://placeholdit.imgix.net/~text?txtsize=48&bg=dddddd&txt=1024%C3%971024&w=1024&h=1024" width="1024" height="1024" class="img-responsive">';
+	}	
+}
+
 //social icons: replace strings with icons
 class mscw_social_icons extends Walker_Nav_Menu {
  

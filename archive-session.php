@@ -10,7 +10,7 @@ $days = array(
 );
 
 $sessions = get_posts(array(
-	'post_type' => 'mscw_session',
+	'post_type' => 'session',
 	'numberposts' => -1,
 ));
 
@@ -22,14 +22,14 @@ foreach ($sessions as $session) {
 	$session->start = get_field('start', $session->ID);
 	$session->end = get_field('end', $session->ID);
 	$session->venue = get_field('venue', $session->ID);
-	$session->presenters = get_field('presenters', $session->ID);
+	$session->speakers = get_field('speakers', $session->ID);
 	$session->link = get_permalink($session->ID);
 	
-	if (is_array($session->presenters)) {
-		foreach ($session->presenters as &$presenter) {
-			$presenter = '<a href="' . get_author_posts_url($presenter['ID']) . '">' . $presenter['display_name'] . '</a>';
+	if (is_array($session->speakers)) {
+		foreach ($session->speakers as &$speaker) {
+			$speaker = '<a href="' . get_permalink($speaker->ID) . '">' . $speaker->post_title . '</a>';
 		}
-		$session->presenters = implode(', ', $session->presenters);
+		$session->speakers = implode(', ', $session->speakers);
 	}
 
 	//day not valid for some reason
@@ -50,7 +50,7 @@ foreach ($sessions as $session) {
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-9 col-md-offset-1 schedule">
+		<div class="col-md-9 col-md-offset-1">
 			<small>Schedule</small>
 			
 			<?php foreach ($days as $day => $slots) {
@@ -70,7 +70,7 @@ foreach ($sessions as $session) {
 							<div class="inner">
 								<small><?php echo $session->venue?></small>
 								<a href="<?php echo $session->link?>" class="title"><?php echo $session->post_title?></a>
-								<?php echo $session->presenters?>
+								<?php echo $session->speakers?>
 							</div>
 						</div>
 					<?php }?>

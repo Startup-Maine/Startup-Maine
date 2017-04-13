@@ -4,7 +4,7 @@
 	<div class="container">
 		<?php
 		if ($items = get_posts(array(
-				'post_type' => 'mscw_carousel',
+				'post_type' => 'carousel',
 				'numberposts' => -1,
 			))) {?>
 		<div class="row">
@@ -89,7 +89,7 @@
 					'Silver' => array(),	
 				);
 				$sponsors = get_posts(array(
-					'post_type' => 'mscw_sponsor',
+					'post_type' => 'sponsor',
 					'numberposts' => -1,
 				));
 				foreach ($sponsors as $sponsor) {
