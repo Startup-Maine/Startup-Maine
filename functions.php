@@ -36,7 +36,7 @@ function mscw_speaker_img($speaker_id) {
 	if ($image = get_the_post_thumbnail($speaker_id, 'large', array('class' => 'img-responsive'))) {
 		return $image;
 	} else {
-		return '<img src="https://placeholdit.imgix.net/~text?txtsize=48&bg=dddddd&txt=1024%C3%971024&w=1024&h=1024" width="1024" height="1024" class="img-responsive">';
+		return '<img src="' . get_stylesheet_directory_uri() . '/assets/img/blank.png" width="1024" height="1024" class="img-responsive">';
 	}	
 }
 

@@ -24,7 +24,7 @@ $speakers = get_field('speakers');
 					<div class="col-md-5">
 						<div class="row">
 							<?php foreach ($speakers as $speaker) {?>
-							<a class="col-md-6 presenter" href="<?php echo get_permalink($speaker->ID)?>">
+							<a class="col-md-6" href="<?php echo get_permalink($speaker->ID)?>">
 								<?php 
 								echo mscw_speaker_img($speaker->ID);
 								echo $speaker->post_title;
