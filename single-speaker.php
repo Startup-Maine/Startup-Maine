@@ -25,7 +25,7 @@ $sessions = get_posts(array(
 					<div class="col-md-7">
 						<div class="meta">
 							<?php foreach ($sessions as $session) {?>
-							<a href="<?php get_permalink($session->ID)?>" class="session">
+							<a href="<?php echo get_permalink($session->ID)?>" class="session">
 								<span><?php the_field('type', $session->ID)?></span>
 								<small><?php the_field('day', $session->ID)?> | <?php the_field('start', $session->ID)?>–<?php the_field('end', $session->ID)?> | <?php the_field('venue', $session->ID)?></small>
 							</a>
