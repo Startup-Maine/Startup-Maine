@@ -54,6 +54,6 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		
 		<?php wp_footer()?>
 
-		<img style="display:none" src="https://t.visto1.net/e?adv=9103&ca=0&acc=60&tag=U5014">
+		<img src="https://t.visto1.net/e?adv=9103&ca=0&acc=60&tag=U5014" style="display:none">
 	</body>
 </html>

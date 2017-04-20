@@ -40,6 +40,12 @@ jQuery(function($){
 		$(this).addClass(class_names);
 	});
 	$('.wpcf7').addClass('loaded');
+
+	//schedule accordion
+	var $schedule = $('#schedule');
+	$schedule.on('show.bs.collapse','.collapse', function() {
+	    $schedule.find('.collapse.in').collapse('hide');
+	});
 	
 	//youtube on homepage
 	YTdeferred.done(function(YT) {
