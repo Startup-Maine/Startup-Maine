@@ -41,5 +41,6 @@ $sessions = get_posts(array(
 		</div>
 	</div>
 </div>
+
 <?php
 get_footer();

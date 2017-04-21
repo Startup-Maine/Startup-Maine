@@ -40,7 +40,7 @@ $latest = current(get_posts(array('numberposts' => 1)));
 			<div class="shape"></div>
 			<div class="text">
 				35% discount<br>
-				through 4/23
+				through 4/30
 				<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
 			</div>
 		</div>
