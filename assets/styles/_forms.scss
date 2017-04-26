@@ -43,6 +43,9 @@
 		&.wpcf7-textarea, &.wpcf7-checkbox, &.wpcf7-checkbox {
 			width: 100%;	
 		}
+		&.wpcf7-submit {
+			clear: left;
+		}
 	}
 	
 	.wpcf7-checkbox {

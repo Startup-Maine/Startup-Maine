@@ -6,7 +6,7 @@ acf_add_options_page();
 //include wordpress actions from actions folder
 foreach (glob(get_stylesheet_directory() . '/actions/*.php') as $file) {
 	$action = basename($file, '.php');
-	add_action($action, function() use ($action) {
+	add_action($action, function($input=null) use ($action) {
 		require_once('actions/' . $action . '.php');
 	});
 	if (substr($action, 0, 8) == 'wp_ajax_') {
