@@ -1,8 +1,5 @@
 <?php
 
-//temporary, will go away soon
-$tickets = 'https://ticketbud.com/events/32582f4c-eb1c-11e6-999e-afbf3b0f7479/register';
-
 //add options page to wp dashboard
 acf_add_options_page();
 
@@ -42,6 +39,15 @@ function mscw_speaker_img($speaker_id) {
 	} else {
 		return '<img src="' . get_stylesheet_directory_uri() . '/assets/img/blank.png" width="1024" height="1024" class="img-responsive">';
 	}	
+}
+
+//format a range of times intelligently, eg 9–10 am, 11:30 am–12 pm
+function mscw_time_range($start, $end) {
+	$start = strtotime($start);
+	$end = strtotime($end);
+	if (!$start || !$end) return null;
+	$start_format = (date('a', $start) == date('a', $end)) ? 'g:i' : 'g:i a';
+	return str_replace(':00', '', date($start_format, $start)) . '&ndash;' . str_replace(':00', '', date('g:i a', $end))	;
 }
 
 //social icons: replace strings with icons

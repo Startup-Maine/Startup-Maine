@@ -1,9 +1,18 @@
 <?php
 get_header();
 the_post();
-$speakers = get_field('speakers');
 
-
+$speakers = get_posts(array(
+	'post_type' => 'speaker',
+	'numberposts' => -1,
+	'meta_query' => array(
+		array(
+			'key' => 'sessions',
+			'value' => '"' . $post->ID . '"',
+			'compare' => 'LIKE',
+		),
+	),
+));
 ?>
 
 <div class="container">
@@ -13,7 +22,7 @@ $speakers = get_field('speakers');
 				<h1><?php the_title()?></h1>
 				<div class="meta">
 					<span><?php the_field('type')?></span>
-					<small><?php the_field('day')?> | <?php the_field('start')?>–<?php the_field('end')?> | <?php the_field('venue')?></small>
+					<small><?php the_field('day')?> | <?php echo mscw_time_range(get_field('start'), get_field('end'))?> | <?php the_field('venue')?></small>
 				</div>
 				<?php if ($speakers) {?>
 				<div class="row more-details">

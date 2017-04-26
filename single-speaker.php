@@ -1,17 +1,7 @@
 <?php
 get_header();
 the_post();
-$sessions = get_posts(array(
-	'post_type' => 'session',
-	'numberposts' => -1,
-	'meta_query' => array(
-		array(
-			'key' => 'speakers',
-			'value' => '"' . $post->ID . '"',
-			'compare' => 'LIKE',
-		),
-	),
-));
+$sessions = get_field('sessions');
 ?>
 
 <div class="container">
@@ -23,15 +13,20 @@ $sessions = get_posts(array(
 				<h3><?php the_field('organization')?></h3>
 				<div class="row more-details">
 					<div class="col-md-7">
+						<?php if (count($sessions)) {?>
 						<div class="meta">
 							<?php foreach ($sessions as $session) {?>
 							<a href="<?php echo get_permalink($session->ID)?>" class="session">
-								<span><?php the_field('type', $session->ID)?></span>
-								<small><?php the_field('day', $session->ID)?> | <?php the_field('start', $session->ID)?>–<?php the_field('end', $session->ID)?> | <?php the_field('venue', $session->ID)?></small>
+								<span><?php echo get_the_title($session)?></span>
+								<small><?php the_field('day', $session)?> | <?php echo mscw_time_range(get_field('start', $session), get_field('end', $session->ID))?> | <?php the_field('venue', $session)?></small>
 							</a>
 							<?php }?>
 						</div>
-						<?php the_content()?>
+						<?php }
+						the_content();
+						if ($linkedin = get_field('linkedin')) {?>
+							<p><a href="<?php echo $linkedin?>" class="linkedin"><i class="fa fa-linkedin-square"></i> LinkedIn Profile</a></p>
+						<?php }?>
 					</div>
 					<div class="col-md-5">
 						<?php echo mscw_speaker_img($post->ID)?>

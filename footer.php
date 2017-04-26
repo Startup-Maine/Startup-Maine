@@ -1,15 +1,10 @@
-<?php
-global $tickets;
-$latest = current(get_posts(array('numberposts' => 1)));
-?>
-
 		</main>
 		
 		<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-offset-1 col-md-10">
-						<p>Site design and development by <a href="https://better-yet.com">Better Yet Studio</a></p>
+						<p>Site design and development by <a href="https://better-yet.com" target="_blank">Better Yet Studio</a></p>
 					</div>
 				</div>
 			</div>
@@ -39,11 +34,12 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		<div id="triangle" class="draggable">
 			<div class="shape"></div>
 			<div class="text">
-				35% discount<br>
-				through 4/30
-				<a href="<?php echo $tickets?>" target="_blank">Reserve Tickets!</a>
+				<?php the_field('triangle_content', 'option')?>
+				<a href="<?php the_field('tickets_url', 'option')?>" target="_blank">Reserve Tickets!</a>
 			</div>
 		</div>
+
+		<?php $latest = current(get_posts(array('numberposts' => 1)))?>
 
 		<div id="circle" class="draggable">
 			<div class="shape"></div>
@@ -53,7 +49,5 @@ $latest = current(get_posts(array('numberposts' => 1)));
 		</div>
 		
 		<?php wp_footer()?>
-
-		<img src="https://t.visto1.net/e?adv=9103&ca=0&acc=60&tag=U5014" style="display:none">
 	</body>
 </html>
