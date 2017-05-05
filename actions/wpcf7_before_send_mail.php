@@ -11,10 +11,11 @@ if ($input->id() == 281) {
 
     //get submission data
     $data = $submission->get_posted_data();
+	$uploads = $submission->uploaded_files();
 
     //don't do anything
     if (empty($data)) return;
-
+    
 	//check if speakers with that email exist
 	$speaker_ids = get_posts(array(
 		'numberposts' => -1,
@@ -45,7 +46,7 @@ if ($input->id() == 281) {
 	}
 	
 	//set the custom fields
-	foreach (array('email', 'organization', 'title', 'linkedin') as $field) {
+	foreach (array('email', 'organization', 'title', 'linkedin', 'twitter') as $field) {
 		if (empty($data[$field])) {
 			delete_post_meta($speaker_id, $field);
 		} else {
@@ -56,9 +57,32 @@ if ($input->id() == 281) {
     //get the email body
     $mail = $wpcf7->prop('mail');
 
-	//append a link
-    $mail['body'] .= '<br><hr><br><a href="' . admin_url('post.php?post=' . $speaker_id . '&action=edit') . '">Click here</a> to edit this speaker.';
+	//get uploaded image and uplaod it to wordpress
+	$image_location = $uploads['image'];
+	$image_content = file_get_contents($image_location);
+	$image_name = $data['image'];
+	$upload = wp_upload_bits($image_name, null, $image_content);
+	$filename = $upload['file'];
+	
+	//create wordpress media object and attach it to the post
+	if (!empty($filename)) {
+		require_once(ABSPATH . 'wp-admin/includes/admin.php');
+		$type = wp_check_filetype(basename($filename), null);
+		$attach_id = wp_insert_attachment(array(
+			'post_mime_type' => $type['type'],
+			'post_title' => $data['your-name'],
+			'post_content' => '',
+			'post_status' => 'inherit'
+		), $filename, $speaker_id);
+		require_once(ABSPATH . 'wp-admin/includes/image.php');
+		$attach_data = wp_generate_attachment_metadata($attach_id, $filename);
+		wp_update_attachment_metadata($attach_id, $attach_data);
+		set_post_thumbnail($speaker_id, $attach_id);
+	}
 
+	//append a link
+	$mail['body'] .= '<br><hr><br><a href="' . admin_url('post.php?post=' . $speaker_id . '&action=edit') . '">Click here</a> to edit this speaker.';
+    
     //save the mail back to the form object
     $wpcf7->set_properties(compact('mail'));
 
