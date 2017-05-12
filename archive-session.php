@@ -26,17 +26,43 @@ foreach ($speakers as $speaker) {
 	}
 }
 
-//build sessions query
-$args = array(
+//searching
+$include = array();
+if ($searching) {
+	
+	//search sessions
+	$sessions = get_posts(array(
+		'post_type' => 'session',
+		'numberposts' => -1,
+		's' => sanitize_text_field($_GET['search']),
+		'fields' => 'ids',
+	));
+	
+	//also search speakers 
+	$speakers = get_posts(array(
+		'post_type' => 'speaker',
+		'numberposts' => -1,
+		's' => sanitize_text_field($_GET['search']),
+		'fields' => 'ids',
+	));
+	
+	foreach ($speakers as $speaker) {
+		foreach (get_field('sessions', $speaker) as $session) {
+			$sessions[] = $session->ID;
+		}
+	}
+	
+	$include = array_unique(array_merge($sessions, $speakers));
+	
+}
+
+$sessions = get_posts(array(
 	'post_type' => 'session',
 	'numberposts' => -1,
 	'orderby' => 'post_title',
 	'order' => 'asc',
-);
-if ($searching) {
-	$args['s'] = sanitize_text_field($_GET['search']);
-}
-$sessions = get_posts($args);
+	'include' => $include,
+));
 
 //loop through and group results into daily schedule 'slots'
 foreach ($sessions as $session) {
@@ -68,15 +94,21 @@ foreach ($sessions as $session) {
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-9 col-md-offset-1">
+		<div class="col-md-2 col-md-push-10">
+			<form id="program-search">
+				<label for="search">Search</label>
+				<input type="search" name="search" value="<?php echo $_GET['search']?>">
+			</form>
+		</div>
+		<div class="col-md-9 col-md-pull-2 col-md-offset-1">
 			<?php if ($searching) {?>
 			<small>Searching Schedule for '<?php echo $_GET['search']?>'</small>
 			<?php } else {?>
 			<small>Schedule</small>
 			<?php }?>
-			
 			<div id="schedule">
 			<?php foreach ($days as $day => $slots) {
+				if (empty($slots)) continue;
 				ksort($slots);			
 				?>
 				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo sanitize_title($day)?>"><?php echo $day?></h1>
@@ -103,13 +135,6 @@ foreach ($sessions as $session) {
 				</div>
 			<?php }?>
 			</div>
-			
-		</div>
-		<div class="col-md-2">
-			<form id="program-search">
-				<label for="search">Search</label>
-				<input type="search" name="search" value="<?php echo $_GET['search']?>">
-			</form>
 		</div>
 	</div>
 </div>

@@ -1,12 +1,12 @@
 //gravity forms
 
 .wpcf7 {
-	padding: 0 15px 50px;
+	padding: 0 10px 50px;
 	opacity: 0;
 	transition: opacity .1s linear;
 	
 	.wpcf7-form {
-		margin: 0 -15px;
+		margin: 0 -10px;
 	}
 	
 	input, textarea {
@@ -36,8 +36,8 @@
 		display: block;
 		float: left;
 		margin-bottom: 15px;
-		padding: 0 15px;
-		&.wpcf7-text {
+		padding: 0 10px;
+		&.wpcf7-text, &.wpcf7-date {
 			width: 50%;
 		}
 		&.wpcf7-textarea, &.wpcf7-checkbox, &.wpcf7-checkbox {

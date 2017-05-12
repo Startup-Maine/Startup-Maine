@@ -1,3 +1,6 @@
+<?php
+if (!empty($_GET['pjax'])) return;
+?>
 		</main>
 		
 		<footer>

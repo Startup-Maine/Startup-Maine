@@ -13,7 +13,7 @@ $sessions = get_field('sessions');
 				<h3><?php the_field('organization')?></h3>
 				<div class="row more-details">
 					<div class="col-md-7">
-						<?php if (count($sessions)) {?>
+						<?php if (!empty($sessions)) {?>
 						<div class="meta">
 							<?php foreach ($sessions as $session) {?>
 							<a href="<?php echo get_permalink($session->ID)?>" class="session">
@@ -26,6 +26,9 @@ $sessions = get_field('sessions');
 						the_content();
 						if ($linkedin = get_field('linkedin')) {?>
 							<p><a href="<?php echo $linkedin?>" class="linkedin"><i class="fa fa-linkedin-square"></i> LinkedIn Profile</a></p>
+						<?php }
+						if ($twitter = get_field('twitter')) {?>
+							<p><a href="<?php echo $twitter?>" class="twitter"><i class="fa fa-twitter-square"></i> Twitter Profile</a></p>
 						<?php }?>
 					</div>
 					<div class="col-md-5">

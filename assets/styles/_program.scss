@@ -4,8 +4,8 @@ body.post-type-archive-session main {
 	
 	form#program-search {
 		background-color: $color-gray-dark;
-		min-height: 200px;
-		padding: 0 5px;
+		padding: 0 5px 5px 5px;
+		margin-bottom: 20px;
 		
 		label {
 			color: $color-white;
@@ -34,7 +34,7 @@ body.post-type-archive-session main {
 		
 		.slot {
 			border-bottom: 1px solid $color-blue;
-			padding: 2px 0 2px 200px;
+			padding: 2px 0;
 			overflow: auto;
 			position: relative;
 			h3 { 
@@ -42,14 +42,10 @@ body.post-type-archive-session main {
 				margin: 3px 0 6px; 
 			}
 			.info {
-				position: absolute;
-				left: 0;
-				top: 7px;
+				padding: 4px;
 			}
 			.session {
-				padding: 3px;
-				float: left; 
-				width: 50%;
+				padding: 3px 0;
 				.inner {
 					background-color: $color-blue-light;
 					height: 100px;
@@ -66,6 +62,30 @@ body.post-type-archive-session main {
 						}
 					}
 				}
+			}
+		}
+		
+	}
+	
+	@media (min-width: $screen-sm-min) {
+		
+		form#program-search {
+			min-height: 200px;
+		}
+		
+		#schedule .slot {
+			padding-left: 200px;
+			
+			.info {
+				position: absolute;
+				left: 0;
+				top: 7px;
+			}
+			
+			.session {
+				padding: 3px;
+				float: left; 
+				width: 50%;
 				&.lightning-workshop, &.affiliate-event {
 					width: 25%;
 				}
@@ -74,7 +94,7 @@ body.post-type-archive-session main {
 				}
 			}
 		}
-		
 	}
+	
 	
 }

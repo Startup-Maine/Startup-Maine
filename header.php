@@ -1,3 +1,6 @@
+<?php
+if (!empty($_GET['pjax'])) return;
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>

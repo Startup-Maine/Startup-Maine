@@ -70,7 +70,7 @@ jQuery(function($){
 		//don't do this for home page carousel controls
 		if ($(this).hasClass('carousel-control')) return;
 		
-		// Make sure this.hash has a value before overriding default behavior
+		//make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
 			//prevent default anchor click behavior
 			event.preventDefault();
@@ -85,7 +85,27 @@ jQuery(function($){
 				window.location.hash = hash;
 			});
 		}
+		
 	});
+	
+	/*footer links
+	$('#footer').on('click', 'a', function(e){
+		
+		e.preventDefault();
+		var url = $(this).attr('href');
+		
+		if ($(this).parent().hasClass('current_page_item')) return;
+		
+		$('#footer li.current_page_item').removeClass('current_page_item');
+		
+		$(this).parent().addClass('current_page_item');
+				
+		$.get(url, { pjax: true }, function(data){
+			$('main').html(data);
+			history.pushState(null, null, url);
+		});
+
+	});*/
 	
 	
 });

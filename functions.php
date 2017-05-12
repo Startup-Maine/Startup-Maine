@@ -3,6 +3,9 @@
 //add options page to wp dashboard
 acf_add_options_page();
 
+//fallback for the date fields
+add_filter('wpcf7_support_html5_fallback', '__return_true');
+
 //include wordpress actions from actions folder
 foreach (glob(get_stylesheet_directory() . '/actions/*.php') as $file) {
 	$action = basename($file, '.php');
