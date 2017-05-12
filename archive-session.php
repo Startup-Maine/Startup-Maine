@@ -3,6 +3,8 @@ get_header();
 
 $searching = !empty($_GET['search']);
 
+$one_open = false;
+
 $days = array(
 	'Monday' => array(),
 	'Tuesday' => array(),
@@ -112,7 +114,7 @@ foreach ($sessions as $session) {
 				ksort($slots);			
 				?>
 				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo sanitize_title($day)?>"><?php echo $day?></h1>
-				<div <?php if (!$searching) {?>class="collapse" id="<?php echo sanitize_title($day)?>"<?php }?>>
+				<div class="collapse<?php if (!$searching && !$one_open) {?> in<?php }?>" id="<?php echo sanitize_title($day)?>">
 				<?php foreach ($slots as $key => $sessions) {
 					list ($start, $end, $type) = explode('|', $key);
 					?>
@@ -133,7 +135,9 @@ foreach ($sessions as $session) {
 				</div>
 				<?php }?>
 				</div>
-			<?php }?>
+			<?php 
+				$one_open = true;
+			}?>
 			</div>
 		</div>
 	</div>
