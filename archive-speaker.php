@@ -8,7 +8,11 @@ $speakers = get_posts(array(
 	'order' => 'asc',
 ));
 
-$people = array();
+$people = array(
+	'Keynotes' => array(),
+	'Panelists & Moderators' => array(),
+	'Workshops' => array(),
+);
 
 foreach ($speakers as $speaker) {
 	$fields = get_fields($speaker->ID);

@@ -83,6 +83,7 @@
 				$tiers = array(
 					'Presenting Donors' => array(),
 					'Partner Donors' => array(),
+					'Diamond' => array(),
 					'Presenting Media Sponsor' => array(),
 					'Platinum' => array(),
 					'Gold' => array(),
@@ -100,7 +101,9 @@
 						'image' => get_the_post_thumbnail($sponsor->ID, 'large', array('class' => 'img-responsive', 'alt' => $sponsor->post_title)),
 					));
 				}
-				foreach ($tiers as $tier => $sponsors) {?>
+				foreach ($tiers as $tier => $sponsors) {
+					if (empty($sponsors)) continue;
+					?>
 					<div class="tier">
 						<small><?php echo $tier?></small>
 						<div class="row"><!--

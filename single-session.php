@@ -31,7 +31,7 @@ $speakers = get_posts(array(
 						<?php the_content()?>
 					</div>
 					<div class="col-md-5">
-						<div class="row">
+						<div class="row speakers">
 							<?php foreach ($speakers as $speaker) {?>
 							<a class="col-md-6" href="<?php echo get_permalink($speaker->ID)?>">
 								<?php 

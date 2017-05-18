@@ -19,8 +19,8 @@ if (!empty($_GET['pjax'])) return;
 					</div>
 					<div class="col-md-5">
 						<form action="https://mainestartupandcreateweek.createsend.com/t/r/s/uluubk/" method="post">
-							<label for="receive_updates">Receive Updates!</label>
-							<input id="receive_updates" name="cm-uluubk-uluubk" type="email" required>
+							<label for="receive_updates">Subscribe for Updates!</label>
+							<input id="receive_updates" name="cm-uluubk-uluubk" type="email" placeholder="Email" required>
 							<input type="submit" id="submit">
 						</form>
 						<?php echo wp_nav_menu(array(

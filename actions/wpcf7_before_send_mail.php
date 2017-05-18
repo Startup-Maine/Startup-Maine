@@ -50,6 +50,15 @@ if ($input->id() == 281) {
 		if (empty($data[$field])) {
 			delete_post_meta($speaker_id, $field);
 		} else {
+			
+			//make sure twitter is real url
+			if ($field == 'twitter') {
+				$data[$field] = str_replace('@', '', $data[$field]);
+				if (substr($data[$field], 0, 4) != 'http') {
+					$data[$field] = 'https://twitter.com/' . $data[$field];
+				}
+			}
+			
 			update_post_meta($speaker_id, $field, $data[$field]);
 		}
 	}

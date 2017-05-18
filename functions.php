@@ -37,11 +37,9 @@ function dd($var) {
 
 //get the thumnail (or a fallback) for a speaker
 function mscw_speaker_img($speaker_id) {
-	if ($image = get_the_post_thumbnail($speaker_id, 'large', array('class' => 'img-responsive'))) {
-		return $image;
-	} else {
-		return '<img src="' . get_stylesheet_directory_uri() . '/assets/img/blank.png" width="1024" height="1024" class="img-responsive">';
-	}	
+	$image = get_the_post_thumbnail_url($speaker_id, 'large');
+	if (!empty($image)) $image = ' style="background-image:url(' . $image . ')"';
+	return '<div class="speaker-img"' . $image . '></div>';
 }
 
 //format a range of times intelligently, eg 9–10 am, 11:30 am–12 pm
