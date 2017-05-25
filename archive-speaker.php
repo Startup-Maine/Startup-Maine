@@ -11,7 +11,6 @@ $speakers = get_posts(array(
 $people = array(
 	'Keynotes' => array(),
 	'Panelists & Moderators' => array(),
-	'Workshops' => array(),
 );
 
 foreach ($speakers as $speaker) {
