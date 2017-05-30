@@ -7,7 +7,7 @@ $sessions = get_field('sessions');
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-1 col-md-10">
-			<div class="detail">
+			<div id="detail">
 				<h1><?php the_title()?></h1>
 				<h3><?php the_field('title')?></h3>
 				<h3><?php the_field('organization')?></h3>
@@ -41,4 +41,5 @@ $sessions = get_field('sessions');
 </div>
 
 <?php
+mscw_footer();
 get_footer();

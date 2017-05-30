@@ -64,48 +64,81 @@ jQuery(function($){
 		});
 	});
 	
-	//smooth scroll anchor links
-	$('#content').on('click', 'a', function(event) {
+	var $body = $('body');
+	
+	//handle animations between regular and yellow pages, and/or smooth scrolling
+	$body.on('click', 'a', function(e){
 		
+		var url = $(this).attr('href');
+
+		var host = location.protocol + '//' + location.hostname;
+				
 		//don't do this for home page carousel controls
 		if ($(this).hasClass('carousel-control')) return;
 		
 		//make sure this.hash has a value before overriding default behavior
-		if (this.hash !== "") {
+		if (url.substr(0, 1) == '#') {
+			
 			//prevent default anchor click behavior
-			event.preventDefault();
-			
-			//store hash
-			var hash = this.hash;
-			
-			var top = $(hash).offset().top - ($('nav#utility').offset().top + $('nav#utility').height());
+			e.preventDefault();
+						
+			var top = $(url).offset().top - ($('nav#utility').offset().top + $('nav#utility').height());
 						
 			//scroll			
 			$('html, body').animate({ scrollTop: top }, 400, function(){
-				window.location.hash = hash;
+				window.location.hash = url;
 			});
+			
+			return;
+		}
+
+		//this only applies to internal links
+		if (url.substr(0, host.length) != host) return;
+
+		//trim host off of URL
+		url = url.substr(host.length);
+		
+		//can't be empty for ajax
+		if (url == '') url = '/';
+		
+		//see if page we're linking to is yellow
+		var isYellowPage = (url != '/') &&
+						   (url != '/program') &&
+						   (url != '/people') &&
+						   (url.substr(0, 9) != '/program/') &&
+						   (url.substr(0, 8) != '/people/');
+						   
+		e.preventDefault();
+		
+		$('ul#menu-tab-menu').removeClass('open');
+		$('li.current_page_item').removeClass('current_page_item');
+		$('li.current_menu_item').removeClass('current_menu_item');
+
+		if ($(this).parents('#menu-tab-menu')) {
+			$(this).parent().addClass('current_page_item');
+		} else if ($(this).parents('#menu-header-menu')) {
+			$(this).parent().addClass('current_menu_item');
 		}
 		
-	});
-	
-	/*footer links
-	$('#footer').on('click', 'a', function(e){
-		
-		e.preventDefault();
-		var url = $(this).attr('href');
-		
-		if ($(this).parent().hasClass('current_page_item')) return;
-		
-		$('#footer li.current_page_item').removeClass('current_page_item');
-		
-		$(this).parent().addClass('current_page_item');
-				
 		$.get(url, { pjax: true }, function(data){
-			$('main').html(data);
-			history.pushState(null, null, url);
+			if (isYellowPage) {
+				$('main#primary').slideUp();
+				$('main#secondary').html(data).slideDown();
+				$body.addClass('yellow');					
+			} else {
+				$('main#secondary').slideUp();
+				$('main#primary').html(data).slideDown(function(){
+					$body.removeClass('yellow');
+				});
+			}
+			$('html, body').animate({ scrollTop: 0 }, 400, function(){
+				history.pushState(null, null, url);
+				var _gaq = _gaq || [];
+				_gaq.push(['_trackPageview']);
+			});
 		});
 
-	});*/
+	});
 	
 	
 });

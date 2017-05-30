@@ -94,7 +94,7 @@ foreach ($sessions as $session) {
 //dd($days);
 ?>
 
-<div class="container">
+<div class="container" id="program">
 	<div class="row">
 		<div class="col-md-2 col-md-push-10">
 			<form id="program-search">
@@ -114,7 +114,7 @@ foreach ($sessions as $session) {
 				ksort($slots);			
 				?>
 				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo sanitize_title($day)?>"><?php echo $day?></h1>
-				<div class="collapse<?php if (!$searching && !$one_open) {?> in<?php }?>" id="<?php echo sanitize_title($day)?>">
+				<div class="collapse<?php if ($searching || !$one_open) {?> in<?php }?>" id="<?php echo sanitize_title($day)?>">
 				<?php foreach ($slots as $key => $sessions) {
 					list ($start, $end, $type) = explode('|', $key);
 					?>
@@ -144,5 +144,5 @@ foreach ($sessions as $session) {
 </div>
 
 <?php
-
+mscw_footer();
 get_footer();

@@ -1,6 +1,6 @@
 //styles for home page
 
-body.home {
+#home {
 	background-color: white;
 	
 	.hero {
@@ -93,10 +93,6 @@ body.home {
 			}
 			&:last-child { border-bottom: 0; }
 		}
-	}
-	
-	#content {
-		padding-top: 0;
 	}
 	
 	@media (min-width: $screen-sm-min) {

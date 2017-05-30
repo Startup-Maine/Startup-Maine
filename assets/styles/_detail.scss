@@ -1,41 +1,37 @@
-body.single-session, body.single-speaker {
-	
-	.detail {
-		background-color: $color-blue;
-		color: $color-white;
-		padding: 20px 15px;
-				
-		.meta {
-			font-size: 11pt;
-			margin-bottom: 20px; 
-			span {
-				margin-right: 15px;
-			}
-			small {
-				font-size: 100%; 
-			}
+#detail {
+	background-color: $color-blue;
+	color: $color-white;
+	padding: 20px 15px;
+			
+	.meta {
+		font-size: 11pt;
+		margin-bottom: 20px; 
+		span {
+			margin-right: 15px;
 		}
+		small {
+			font-size: 100%; 
+		}
+	}
 
-		a { color: $color-white; }
-		
-		.meta a {
-			display: block; margin-bottom: 3px;
-		}
-		
-		.speakers a {
-			margin-bottom: 15px;
-		}
-		
-		.more-details {
-			margin-top: 30px;
-		}
-		
-		.linkedin i {
-			float: left; 
-			margin-right: 6px;
-			font-size: 18px;
-		}
-		
+	a { color: $color-white; }
+	
+	.meta a {
+		display: block; margin-bottom: 3px;
+	}
+	
+	.speakers a {
+		margin-bottom: 15px;
+	}
+	
+	.more-details {
+		margin-top: 30px;
+	}
+	
+	.linkedin i {
+		float: left; 
+		margin-right: 6px;
+		font-size: 18px;
 	}
 	
 }

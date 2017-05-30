@@ -9,7 +9,7 @@ if (!empty($_GET['pjax'])) return;
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php wp_head()?>
 	</head>
-	<body <?php body_class()?>>
+	<body <?php body_class('yellow')?>>
 		
 		<header>
 			<div class="container">
@@ -34,3 +34,25 @@ if (!empty($_GET['pjax'])) return;
 		</header>
 
 		<main id="primary">
+		</main>
+		
+		<nav id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10">
+						<?php echo wp_nav_menu(array(
+							'menu'              => 'footer',
+							'theme_location'    => 'footer',
+							'container'			=> null,
+							'items_wrap'			=> '<ul id="%1$s" class="%2$s">
+								%3$s
+								<div class="menu-toggle menu-open"><i class="fa fa-bars"></i> Menu</div>
+								<div class="menu-toggle menu-close"><i class="fa fa-times"></i> Close</div>
+								</ul>',
+						)) ?>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<main id="secondary">

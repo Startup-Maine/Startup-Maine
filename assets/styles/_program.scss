@@ -1,6 +1,6 @@
 //styles for program page
 
-body.post-type-archive-session main {
+#program {
 	
 	form#program-search {
 		background-color: $color-gray-dark;
@@ -51,6 +51,7 @@ body.post-type-archive-session main {
 					height: 100px;
 					font-size: 11pt;
 					padding: 5px;
+					overflow: hidden;
 					small {
 						display: block;
 					}

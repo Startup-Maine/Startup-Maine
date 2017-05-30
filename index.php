@@ -1,4 +1,6 @@
-<?php get_header()?>
+<?php
+get_header('yellow');
+?>
 
 <div class="container">
 	<div class="row">
@@ -9,10 +11,10 @@
 				?>
 				<div class="post">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-xs-3">
 							<?php echo get_the_post_thumbnail($post->ID, 'large', array('class' => 'img-responsive'))?>
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9">
 							<small><?php the_date('m.d.y')?></small>
 							<h4><a href="<?php the_permalink()?>"><?php the_title()?></a></h4>
 							<?php the_excerpt()?>
@@ -24,4 +26,4 @@
 	</div>
 </div>
 
-<?php get_footer()?>
+<?php get_footer('yellow')?>

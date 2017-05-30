@@ -35,6 +35,18 @@ function dd($var) {
 	exit;
 }
 
+function mscw_footer() {?>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<p>Site design and development by <a href="https://better-yet.com" target="_blank">Better Yet Studio</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+<?php }
+
 //get the thumnail (or a fallback) for a speaker
 function mscw_speaker_img($speaker_id) {
 	$image = get_the_post_thumbnail_url($speaker_id, 'large');

@@ -18,7 +18,7 @@ $speakers = get_posts(array(
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-1 col-md-10">
-			<div class="detail">
+			<div id="detail">
 				<h1><?php the_title()?></h1>
 				<div class="meta">
 					<span><?php the_field('type')?></span>
@@ -52,4 +52,5 @@ $speakers = get_posts(array(
 	</div>
 </div>
 <?php
+mscw_footer();
 get_footer();

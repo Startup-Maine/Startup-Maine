@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header('yellow');
 the_post();
 ?>
 
@@ -14,4 +14,5 @@ the_post();
 </div>
 
 <?php
-get_footer();
+mscw_footer();
+get_footer('yellow');

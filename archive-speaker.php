@@ -23,7 +23,7 @@ foreach ($speakers as $speaker) {
 }
 ?>
 
-<div class="container">
+<div class="container" id="people">
 	<div class="row">
 		<div class="col-md-11 col-md-offset-1">
 			<small>People</small>
@@ -50,4 +50,5 @@ foreach ($speakers as $speaker) {
 </div>
 
 <?php
+mscw_footer();	
 get_footer();

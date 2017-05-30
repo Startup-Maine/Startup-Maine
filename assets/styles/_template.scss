@@ -1,21 +1,23 @@
 //template -- stuff that goes on every page and is does not also belong in the WP editor
 
+html, body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 body {
 	&.admin-bar {
 		div#wpadminbar { position: fixed; }
 		#utility { top: 46px; }
 	}
-	&.page, &.blog, &.single-post { 
-		main {
-			color: inherit;
-			.post {
-				padding-top: 10px;
-				padding-bottom: 10px;
-				border-top: 1px solid black;
-				h3 { text-transform: uppercase; }
-			}
-		}
-	}
+}
+
+.post {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid black;
+	h3 { text-transform: uppercase; }
 }
 
 nav {
@@ -109,7 +111,7 @@ header {
 				font-size: 2.2rem;
 				font-family: 'font-mono';
 			}
-			&.current_page_item a { text-decoration: underline; }
+			&.current-menu-item a { text-decoration: underline; }
 			& + li {
 				margin-left: 15px;
 				&:before {
@@ -139,9 +141,21 @@ header {
 }
 
 main {
-	color: $color-blue;
-	padding-top: 30px;
-	min-height: 400px;
+	&#primary {
+		color: $color-blue;
+		footer {
+			color: #333333;
+		}
+	}
+	&#secondary {
+		background-color: $color-yellow;
+		flex-grow: 1;
+		
+		//give it a little breathing room at top
+		.container:first-child {
+			padding-top: 30px;
+		}
+	}
 }
 
 footer {
@@ -215,14 +229,10 @@ footer {
 		&.admin-bar #utility {
 			top: 32px;
 		}
-		&.page #footer, &.blog #footer, &.single-post #footer {
+		&.yellow #footer {
 			position: static;
-			background-color: $color-gray; //for when it's a yellow band across the top
-		}
-		&.home #footer {
-			//because home also has class .page
-			position: fixed;
-			background-color: transparent;
+			z-index: 0;
+			background-color: $color-gray;
 		}
 	}
 	header {

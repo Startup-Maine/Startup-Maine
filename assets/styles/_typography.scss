@@ -20,9 +20,14 @@ body {
 	background: $color-gray;
 	font-family: 'font-regular';
 	font-size: 12pt;
-	&.page, &.blog, &.single-post, &.post-type-page {
+	/*
+	&.yellow {
 		background-color: $color-yellow;
 	}
+	&.home {
+		background-color: $color-white;
+	}
+	*/
 }
 
 h1 {
