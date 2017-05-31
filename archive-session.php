@@ -3,7 +3,7 @@ get_header();
 
 $searching = !empty($_GET['search']);
 
-$one_open = false;
+$open = $_COOKIE['schedule'] ?: 'monday';
 
 $days = array(
 	'Monday' => array(),
@@ -111,10 +111,11 @@ foreach ($sessions as $session) {
 			<div id="schedule">
 			<?php foreach ($days as $day => $slots) {
 				if (empty($slots)) continue;
-				ksort($slots);			
+				ksort($slots);
+				$key = sanitize_title($day);
 				?>
-				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo sanitize_title($day)?>"><?php echo $day?></h1>
-				<div class="collapse<?php if ($searching || !$one_open) {?> in<?php }?>" id="<?php echo sanitize_title($day)?>">
+				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo $key?>"><?php echo $day?></h1>
+				<div class="collapse<?php if ($searching || $open == $key) {?> in<?php }?>" id="<?php echo $key?>">
 				<?php foreach ($slots as $key => $sessions) {
 					list ($start, $end, $type) = explode('|', $key);
 					?>

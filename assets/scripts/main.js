@@ -1,15 +1,12 @@
 jQuery(function($){
 	
+	var $body = $('body');
+	
 	//bottom form css helper for mobile
 	$('ul#menu-tab-menu').on('click', '.menu-toggle', function(){
 		$(this).parent().toggleClass('open');
 	});
 
-	/*if not ios, open form in new tab
-	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
-		$('header form').attr('target', '_blank');
-	}*/
-		
 	//get circle	 and triangle coordinates
 	if (coordinates = Cookies.get('mscw_triangle')) {
 		coordinates = coordinates.split(',');
@@ -42,9 +39,9 @@ jQuery(function($){
 	$('.wpcf7').addClass('loaded');
 
 	//schedule accordion
-	var $schedule = $('#schedule');
-	$schedule.on('show.bs.collapse','.collapse', function() {
-	    $schedule.find('.collapse.in').collapse('hide');
+	$body.on('show.bs.collapse','.collapse', function(e) {
+	    $body.find('.collapse.in').collapse('hide');
+		Cookies.set('schedule', $(e.target).attr('id'));
 	});
 	
 	//youtube on homepage
@@ -63,8 +60,6 @@ jQuery(function($){
 			}
 		});
 	});
-	
-	var $body = $('body');
 	
 	//handle animations between regular and yellow pages, and/or smooth scrolling
 	function loadPage(url, e) {
@@ -95,9 +90,7 @@ jQuery(function($){
 		
 		//don't do this with wp-admin links
 		if (url.substr(0, 9) == '/wp-admin') return;
-		
-		console.log('url was ' + url);
-		
+				
 		//can't be empty for ajax
 		if (url == '') url = '/';
 		
@@ -112,12 +105,12 @@ jQuery(function($){
 		
 		$('ul#menu-tab-menu').removeClass('open');
 		$('li.current_page_item').removeClass('current_page_item');
-		$('li.current_menu_item').removeClass('current_menu_item');
+		$('li.current-menu-item').removeClass('current-menu-item');
 
 		if ($(this).parents('#menu-tab-menu')) {
 			$(this).parent().addClass('current_page_item');
 		} else if ($(this).parents('#menu-header-menu')) {
-			$(this).parent().addClass('current_menu_item');
+			$(this).parent().addClass('current-menu-item');
 		}
 		
 		$.get(url, { pjax: true }, function(data){
@@ -134,8 +127,10 @@ jQuery(function($){
 				});
 			}
 			
-			//scroll to top
-			$('html, body').animate({ scrollTop: 0 }, 400);
+			//scroll to top, except on schedule page
+			if (url != '/program') {
+				$('html, body').animate({ scrollTop: target }, 400);
+			}
 
 			//manage url
 			history.pushState(null, null, url);
@@ -151,10 +146,8 @@ jQuery(function($){
 	$body.on('click', 'a', function(e){
 		//don't do this for home page carousel controls
 		if ($(this).hasClass('carousel-control')) return;
-		
 		var url = $(this).attr('href');
 		loadPage(url, e);
-
 	});
 	
 	//popstate occurs when going back
