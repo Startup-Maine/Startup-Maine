@@ -129,7 +129,7 @@ jQuery(function($){
 			
 			//scroll to top, except on schedule page
 			if (url != '/program') {
-				$('html, body').animate({ scrollTop: target }, 400);
+				$('html, body').animate({ scrollTop: 0 }, 400);
 			}
 
 			//manage url
