@@ -67,20 +67,15 @@ jQuery(function($){
 	var $body = $('body');
 	
 	//handle animations between regular and yellow pages, and/or smooth scrolling
-	$body.on('click', 'a', function(e){
+	function loadPage(url, e) {
 		
-		var url = $(this).attr('href');
-
 		var host = location.protocol + '//' + location.hostname;
 				
-		//don't do this for home page carousel controls
-		if ($(this).hasClass('carousel-control')) return;
-		
-		//make sure this.hash has a value before overriding default behavior
+		//for anchor links, handle smooth scrolling
 		if (url.substr(0, 1) == '#') {
 			
 			//prevent default anchor click behavior
-			e.preventDefault();
+			if (e) e.preventDefault();
 						
 			var top = $(url).offset().top - ($('nav#utility').offset().top + $('nav#utility').height());
 						
@@ -98,6 +93,11 @@ jQuery(function($){
 		//trim host off of URL
 		url = url.substr(host.length);
 		
+		//don't do this with wp-admin links
+		if (url.substr(0, 9) == '/wp-admin') return;
+		
+		console.log('url was ' + url);
+		
 		//can't be empty for ajax
 		if (url == '') url = '/';
 		
@@ -108,7 +108,7 @@ jQuery(function($){
 						   (url.substr(0, 9) != '/program/') &&
 						   (url.substr(0, 8) != '/people/');
 						   
-		e.preventDefault();
+		if (e) e.preventDefault();
 		
 		$('ul#menu-tab-menu').removeClass('open');
 		$('li.current_page_item').removeClass('current_page_item');
@@ -121,6 +121,8 @@ jQuery(function($){
 		}
 		
 		$.get(url, { pjax: true }, function(data){
+			
+			//replace page content
 			if (isYellowPage) {
 				$('main#primary').slideUp();
 				$('main#secondary').html(data).slideDown();
@@ -131,15 +133,34 @@ jQuery(function($){
 					$body.removeClass('yellow');
 				});
 			}
-			$('html, body').animate({ scrollTop: 0 }, 400, function(){
-				history.pushState(null, null, url);
-				var _gaq = _gaq || [];
-				_gaq.push(['_trackPageview']);
-			});
+			
+			//scroll to top
+			$('html, body').animate({ scrollTop: 0 }, 400);
+
+			//manage url
+			history.pushState(null, null, url);
+			
+			//push pageview to google analytics
+			var _gaq = _gaq || [];
+			_gaq.push(['_trackPageview']);
 		});
+
+	}
+	
+	//intercept all a clicks with loadPage
+	$body.on('click', 'a', function(e){
+		//don't do this for home page carousel controls
+		if ($(this).hasClass('carousel-control')) return;
+		
+		var url = $(this).attr('href');
+		loadPage(url, e);
 
 	});
 	
+	//popstate occurs when going back
+	$(window).on('popstate', function(e){
+		loadPage(location.href);
+	});
 	
 });
 
