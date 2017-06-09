@@ -30,13 +30,20 @@ jQuery(function($){
 	}).addClass('loaded');
 	
 	//togglable forms
-	$('.wpcf7-submit').wrap('<span class="wpcf7-form-control-wrap"/>');
-	$('.wpcf7-form-control-wrap').each(function(){
-		var class_names = $(this).children().first().attr('class');
-		class_names = class_names.replace('wpcf7-form-control ', '');
-		$(this).addClass(class_names);
-	});
-	$('.wpcf7').addClass('loaded');
+	function loadForms() {
+		$('.wpcf7').each(function(){
+			if ($(this).hasClass('loaded')) return;
+			$(this).find('.wpcf7-submit').wrap('<span class="wpcf7-form-control-wrap"/>');
+			$(this).find('.wpcf7-form-control-wrap').each(function(){
+				var class_names = $(this).children().first().attr('class');
+				class_names = class_names.replace('wpcf7-form-control ', '');
+				$(this).addClass(class_names);
+			});
+			$(this).addClass('loaded');
+		});
+	}
+	
+	loadForms();
 
 	//schedule accordion
 	$body.on('show.bs.collapse','.collapse', function(e) {
@@ -65,7 +72,9 @@ jQuery(function($){
 	function loadPage(url, e) {
 		
 		var host = location.protocol + '//' + location.hostname;
-				
+		
+		if (typeof url == 'undefined') return;
+		
 		//for anchor links, handle smooth scrolling
 		if (url.substr(0, 1) == '#') {
 			
@@ -126,6 +135,8 @@ jQuery(function($){
 					$body.removeClass('yellow');
 				});
 			}
+			
+			loadForms();
 			
 			//scroll to top, except on schedule page
 			if (url != '/program') {
