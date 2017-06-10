@@ -45,10 +45,13 @@ jQuery(function($){
 	
 	loadForms();
 
-	//schedule accordion
-	$body.on('show.bs.collapse','.collapse', function(e) {
-	    $body.find('.collapse.in').collapse('hide');
-		Cookies.set('schedule', $(e.target).attr('id'));
+	//remember which accordion items were open
+	$body.on('shown.bs.collapse hidden.bs.collapse','.collapse', function(e) {
+		var open_days = [];
+		$('.collapse.in').each(function(){
+			open_days[open_days.length] = $(this).attr('id');
+		});
+		Cookies.set('schedule', open_days.join(','));
 	});
 	
 	//youtube on homepage

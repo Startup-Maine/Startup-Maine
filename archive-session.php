@@ -3,7 +3,7 @@ get_header();
 
 $searching = !empty($_GET['search']);
 
-$open = $_COOKIE['schedule'] ?: 'monday';
+$open = explode(',', $_COOKIE['schedule']) ?: array('monday');
 
 $days = array(
 	'Monday' => array(),
@@ -115,7 +115,7 @@ foreach ($sessions as $session) {
 				$key = sanitize_title($day);
 				?>
 				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo $key?>"><?php echo $day?></h1>
-				<div class="collapse<?php if ($searching || $open == $key) {?> in<?php }?>" id="<?php echo $key?>">
+				<div class="collapse<?php if ($searching || in_array($key, $open)) {?> in<?php }?>" id="<?php echo $key?>">
 				<?php foreach ($slots as $key => $sessions) {
 					list ($start, $end, $type) = explode('|', $key);
 					?>
