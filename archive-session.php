@@ -106,7 +106,12 @@ foreach ($sessions as $session) {
 			<?php if ($searching) {?>
 			<small>Searching Schedule for '<?php echo $_GET['search']?>'</small>
 			<?php } else {?>
-			<small>Schedule</small>
+			<small>
+				Schedule
+				<?php if ($schedule_pdf = get_field('schedule_pdf', 'options')) {?>
+					<a href="<?php echo $schedule_pdf?>">PDF View</a>
+				<?php }?>
+			</small>
 			<?php }?>
 			<div id="schedule">
 			<?php foreach ($days as $day => $slots) {

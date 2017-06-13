@@ -23,6 +23,14 @@
 		}
 	}
 	
+	small a {
+		float: right;
+		margin-top: 3px;
+		font-family: 'font-mono';
+		font-weight: normal;
+		color: $color-gray-darker;
+	}
+	
 	#schedule {
 		
 		h1 {

@@ -75,7 +75,8 @@ jQuery(function($){
 	function loadPage(url, e) {
 		
 		var host = location.protocol + '//' + location.hostname;
-		
+
+		//need a URL		
 		if (typeof url == 'undefined') return;
 		
 		//for anchor links, handle smooth scrolling
@@ -95,26 +96,21 @@ jQuery(function($){
 		}
 
 		//this only applies to internal links
-		if (url.substr(0, host.length) != host) return;
-
-		//trim host off of URL
-		url = url.substr(host.length);
+		if (url.substr(0, host.length) == host) url = url.substr(host.length);
 		
-		//don't do this with wp-admin links
-		if (url.substr(0, 9) == '/wp-admin') return;
-				
 		//can't be empty for ajax
 		if (url == '') url = '/';
 		
-		//see if page we're linking to is yellow
-		var isYellowPage = (url != '/') &&
-						   (url != '/program') &&
-						   (url != '/people') &&
-						   (url.substr(0, 9) != '/program/') &&
-						   (url.substr(0, 8) != '/people/');
-						   
-		if (e) e.preventDefault();
+		var gray_pages = ['/', '/program', '/people'];
+		var is_gray = ($.inArray(url, gray_pages) !== -1);
 		
+		var yellow_pages = ['/attend', '/about', '/whats-new', '/get-involved'];
+		var is_yellow = ($.inArray(url, yellow_pages) !== -1);
+		
+		if (!is_gray && !is_yellow) return;
+								   
+		if (e) e.preventDefault();
+				
 		$('ul#menu-tab-menu').removeClass('open');
 		$('li.current_page_item').removeClass('current_page_item');
 		$('li.current-menu-item').removeClass('current-menu-item');
@@ -128,7 +124,7 @@ jQuery(function($){
 		$.get(url, { pjax: true }, function(data){
 			
 			//replace page content
-			if (isYellowPage) {
+			if (is_yellow) {
 				$('main#primary').slideUp();
 				$('main#secondary').html(data).slideDown();
 				$body.addClass('yellow');					
