@@ -203,11 +203,8 @@ footer {
 		top: $triangle-height * .8 / 2;
 		width: 100%;
 		a {
-			display: block; 
 			font-family: 'font-bold';
 			color: $color-white;
-			font-size: 20px;
-			margin-top: 20px;
 			text-decoration: underline;
 		}
 	}
@@ -248,7 +245,6 @@ footer {
 		.text {
 			font-size: 18px;
 			top: $triangle-height / 2;
-			a { font-size: 24px; }
 		}
 	}
 	#circle {
