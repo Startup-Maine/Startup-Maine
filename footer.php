@@ -47,10 +47,7 @@ if (!empty($_GET['pjax'])) return;
 
 		<div id="triangle" class="draggable">
 			<div class="shape"></div>
-			<div class="text">
-				<?php the_field('triangle_content', 'option')?>
-				<a href="<?php the_field('triangle_url', 'option')?>" target="_blank"><?php the_field('triangle_cta', 'option')?></a>
-			</div>
+			<div class="text"><?php the_field('triangle_content', 'option')?></div>
 		</div>
 
 		<?php $latest = current(get_posts(array('numberposts' => 1)))?>
