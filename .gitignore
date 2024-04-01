@@ -6,3 +6,4 @@ yarn-error.log
 assets/js
 assets/css
 images
+*.zip
