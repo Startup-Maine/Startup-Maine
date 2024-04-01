@@ -1,4 +1,5 @@
 node_modules
 assets/fonts
+fonts
 .DS_Store
 yarn-error.log

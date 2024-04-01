@@ -1,5 +1,3 @@
-//basic typography that also goes in editor-style
-
 a { 
 	font-family: 'font-bold';
 	font-weight: normal;
@@ -20,14 +18,6 @@ body {
 	background: $color-gray;
 	font-family: 'font-regular';
 	font-size: 12pt;
-	/*
-	&.yellow {
-		background-color: $color-yellow;
-	}
-	&.home {
-		background-color: $color-white;
-	}
-	*/
 }
 
 h1 {

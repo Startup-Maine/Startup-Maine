@@ -1,1 +1,93 @@
-a,a:hover{color:#266eb5}a,b,strong{font-family:font-bold;font-weight:400}h3,h4{margin:0}h2,p{margin:0 0 20px}@font-face{font-family:font-bold;src:url(../fonts/32F6BB_0_0.eot);src:url(../fonts/32F6BB_0_0.eot?#iefix) format("embedded-opentype"),url(../fonts/32F6BB_0_0.woff2) format("woff2"),url(../fonts/32F6BB_0_0.woff) format("woff"),url(../fonts/32F6BB_0_0.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:font-regular;src:url(../fonts/32F6BB_1_0.eot);src:url(../fonts/32F6BB_1_0.eot?#iefix) format("embedded-opentype"),url(../fonts/32F6BB_1_0.woff2) format("woff2"),url(../fonts/32F6BB_1_0.woff) format("woff"),url(../fonts/32F6BB_1_0.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:font-mono;src:url(../fonts/monosten-c.eot);src:url(../fonts/monosten-c.eot?#iefix) format("embedded-opentype"),url(../fonts/monosten-c.woff) format("woff"),url(../fonts/monosten-c.woff2) format("woff2"),url(../fonts/monosten-c.ttf) format("truetype");font-weight:400;font-style:normal}a{cursor:pointer}a:hover{text-decoration:underline}body{background:#eaeaea;font-family:font-regular;font-size:12pt}h1,h3,h4{font-family:font-bold;font-weight:400}h1{font-size:30pt;margin:30px 0 20px}h1:first-child{margin-top:0}h2{font-weight:400;font-size:20pt}h3{font-size:16pt}h4{font-size:12pt;text-transform:uppercase}hr{border:0;border-top:1px solid #000}iframe{max-width:100%}p:last-child{margin-bottom:0}small{font-family:font-mono}
+@font-face {
+  font-family: "font-bold";
+  src: url(/fonts/32F6BB_0_0.eot?217014efda81f396789026bf984c4362);
+  src: url(/fonts/32F6BB_0_0.eot?217014efda81f396789026bf984c4362?#iefix) format("embedded-opentype"), url(/fonts/32F6BB_0_0.woff2?7bf6ed3df6da5e68837a903c43dbada3) format("woff2"), url(/fonts/32F6BB_0_0.woff?0bcb365b63efc3bb3487c1541ac8b48b) format("woff"), url(/fonts/32F6BB_0_0.ttf?cf9943f75ee7dd4234857adea817d904) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "font-regular";
+  src: url(/fonts/32F6BB_1_0.eot?93e6c887cf684f139f7a5f1885195431);
+  src: url(/fonts/32F6BB_1_0.eot?93e6c887cf684f139f7a5f1885195431?#iefix) format("embedded-opentype"), url(/fonts/32F6BB_1_0.woff2?8cbf2d906635c7d1bfbcb21c63d239d3) format("woff2"), url(/fonts/32F6BB_1_0.woff?f0e0871636e87937b98b7cedce5fc7a7) format("woff"), url(/fonts/32F6BB_1_0.ttf?634fef5f25ad128f924f45ee9d84760d) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "font-mono";
+  src: url(/fonts/monosten-c.eot?e5e9c208dfc7b9f296a86e9eb651a78e);
+  src: url(/fonts/monosten-c.eot?e5e9c208dfc7b9f296a86e9eb651a78e?#iefix) format("embedded-opentype"), url(/fonts/monosten-c.woff?033f133c21f66f600378b142baac1abf) format("woff"), url(/fonts/monosten-c.woff2?f2be207af0d8fbc547bf7ac6dbebf9c4) format("woff2"), url(/fonts/monosten-c.ttf?1f371ae49113b67c239aaca0163eb8b0) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  font-family: "font-bold";
+  font-weight: normal;
+  color: rgb(38, 110, 181);
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(38, 110, 181);
+  text-decoration: underline;
+}
+
+b, strong {
+  font-family: "font-bold";
+  font-weight: normal;
+}
+
+body {
+  background: rgb(234, 234, 234);
+  font-family: "font-regular";
+  font-size: 12pt;
+}
+
+h1 {
+  font-family: "font-bold";
+  font-weight: normal;
+  font-size: 30pt;
+  margin: 30px 0 20px;
+}
+h1:first-child {
+  margin-top: 0;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 20pt;
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-family: "font-bold";
+  font-weight: normal;
+  font-size: 16pt;
+  margin: 0;
+}
+
+h4 {
+  font-family: "font-bold";
+  font-weight: normal;
+  font-size: 12pt;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid black;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 20px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+small {
+  font-family: "font-mono";
+}
