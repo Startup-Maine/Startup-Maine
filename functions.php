@@ -1,5 +1,22 @@
 <?php
 
+function register_my_menu() {
+	register_nav_menu('header-menu',__( 'Header Menu' ));
+  }
+  add_action( 'init', 'register_my_menu' );
+//adds menus
+add_theme_support( 'menus' );
+
+function register_my_menus() {
+	register_nav_menus(
+	  array(
+		'header-menu' => __( 'Header Menu' ),
+		'extra-menu' => __( 'Extra Menu' )
+	  )
+	);
+  }
+  add_action( 'init', 'register_my_menus' );
+
 //add options page to wp dashboard
 acf_add_options_page();
 
@@ -40,7 +57,10 @@ function mscw_footer() {?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-offset-1 col-md-10">
-					<p>Site design and development by <a href="https://better-yet.com" target="_blank">Better Yet Studio</a></p>
+					<p>Site design by <a href="http://www.alpinedesignworks.com/" target="_blank">Alpine Design Works</a><br />
+					<br/>
+					<strong>General Inquiries:</strong> info@startupmaine.org<br />
+					<strong>Katie Shorey, President:</strong> katie@startupmaine.org</p>
 				</div>
 			</div>
 		</div>
@@ -51,7 +71,7 @@ function mscw_footer() {?>
 function mscw_speaker_img($speaker_id) {
 	$image = get_the_post_thumbnail_url($speaker_id, 'large');
 	if (!empty($image)) $image = ' style="background-image:url(' . $image . ')"';
-	return '<div class="speaker-img"' . $image . '></div>';
+	return '<div class="speaker-img lazyload"' . $image . '></div>';
 }
 
 //format a range of times intelligently, eg 9–10 am, 11:30 am–12 pm
@@ -115,3 +135,9 @@ class mscw_social_icons extends Walker_Nav_Menu {
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }
+
+function lazyLoadImages() {
+    wp_register_script( 'lazyLoading', '/wp-content/themes/mscw/assets/js/lazysizes.min.js', array(), null, true );
+    wp_enqueue_script('lazyLoading');
+}
+add_action('wp_enqueue_scripts', 'lazyLoadImages');
