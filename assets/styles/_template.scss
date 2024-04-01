@@ -223,7 +223,7 @@ footer {
 	margin-bottom: 5px;	
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: 30em) {
 	body {
 		&.admin-bar #utility {
 			top: 32px;
