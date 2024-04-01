@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "scripts": {
     "prod": "gulp --production",
     "dev": "gulp watch"
@@ -17,5 +17,12 @@
     "lodash": "^4.16.2",
     "vue": "^2.0.1",
     "vue-resource": "^1.0.3"
-  }
+  },
+  "name": "startup-maine",
+  "version": "1.0.0",
+  "description": "Startup Maine & Maine Startup Week",
+  "main": "index.js",
+  "repository": "git@github.com:Startup-Maine/mscw.git",
+  "author": "Startup Maine <info@startupmaine.org>",
+  "license": "MIT"
 }
