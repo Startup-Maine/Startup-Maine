@@ -98,6 +98,11 @@ header {
 		white-space: nowrap;
 		overflow: hidden;
 	}
+	h1#logo{
+		width: 300px;
+		height: 250px;
+		margin: auto;
+	}
 	#menu-header-menu {
 		list-style: none;
 		padding: 20px 0 0 0;
@@ -232,6 +237,9 @@ footer {
 	header {
 		padding-top: 62px;
 		#menu-header-menu { padding-top: 40px; }
+	}
+	header h1#logo {
+		width: 100%;
 	}
 	#circle, #triangle {
 		display: block;
