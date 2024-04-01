@@ -14,5 +14,4 @@ the_post();
 </div>
 
 <?php
-mscw_footer();
 get_footer('yellow');

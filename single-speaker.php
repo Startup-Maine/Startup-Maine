@@ -41,5 +41,4 @@ $sessions = get_field('sessions');
 </div>
 
 <?php
-mscw_footer();
 get_footer();

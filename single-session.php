@@ -52,5 +52,4 @@ $speakers = get_posts(array(
 	</div>
 </div>
 <?php
-mscw_footer();
 get_footer();

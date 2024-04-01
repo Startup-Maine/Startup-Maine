@@ -52,21 +52,6 @@ function dd($var) {
 	exit;
 }
 
-function mscw_footer() {?>
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-offset-1 col-md-10">
-					<p>Site design by <a href="http://www.alpinedesignworks.com/" target="_blank">Alpine Design Works</a><br />
-					<br/>
-					<strong>General Inquiries:</strong> info@startupmaine.org<br />
-					<strong>Katie Shorey, President:</strong> katie@startupmaine.org</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-<?php }
-
 //get the thumnail (or a fallback) for a speaker
 function mscw_speaker_img($speaker_id) {
 	$image = get_the_post_thumbnail_url($speaker_id, 'large');

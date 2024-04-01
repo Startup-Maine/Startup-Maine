@@ -145,7 +145,6 @@ get_header();
 		</div>
 	</div>
 	<script async defer type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us12.list-manage.com","uuid":"e622297fee792d99c7d2d1d37","lid":"22f8f595d4"}) })</script>
-	<?php mscw_footer()?>
 </div>
 
 <?php 

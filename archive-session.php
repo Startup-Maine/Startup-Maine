@@ -104,5 +104,4 @@ foreach ($sessions as $session) {
 </div>
 
 <?php
-mscw_footer();
 get_footer();
