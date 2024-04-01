@@ -7,7 +7,7 @@ jQuery(function($){
 		$(this).parent().toggleClass('open');
 	});
 
-	//get circle	 and triangle coordinates
+	//get circle and triangle coordinates
 	if (coordinates = Cookies.get('mscw_triangle')) {
 		coordinates = coordinates.split(',');
 		$('#triangle').css({left:coordinates[0] + 'px', top:coordinates[1] + 'px'});
