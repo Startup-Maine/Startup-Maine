@@ -4,5 +4,5 @@ fonts
 .DS_Store
 yarn-error.log
 assets/js
-# assets/css/*
+assets/css
 images
