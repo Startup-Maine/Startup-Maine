@@ -10,7 +10,7 @@ $speakers = get_posts(array(
 
 $people = array(
 	'Keynotes' => array(),
-	'Panelists & Moderators' => array(),
+	'Workshops & Panels' => array(),
 );
 
 foreach ($speakers as $speaker) {
@@ -27,14 +27,18 @@ foreach ($speakers as $speaker) {
 	<div class="row">
 		<div class="col-md-11 col-md-offset-1">
 			<small>People</small>
-			<h1>Speakers</h1>
+			<h1>2024 Speakers & Panelists</h1>
+			<!-- <p><a href="https://www.startupmaine.org/get-involved/">Click here</a> to submit your workshop application or suggest a speaker.<br> -->
 			<?php foreach ($people as $type => $speakers) {?>
 				<div class="type">
 					<h3><?php echo $type?></h3>
 					<div class="row">
-						<?php foreach ($speakers as $speaker) {?>
+						<?php foreach ($speakers as $speaker) {
+							$imagesrc =  array("src=", "srcset=");
+							$imagesetsrc =  array("data-src=", "data-srcset=");
+							?>
 						<a class="col-md-2" href="<?php echo get_permalink($speaker->ID)?>">
-							<?php echo mscw_speaker_img($speaker->ID)?>
+							<!-- <?php echo str_replace($imagesrc, $imagesetsrc, mscw_speaker_img($speaker->ID))?> -->
 							<div class="meta">
 								<strong><?php echo $speaker->post_title?></strong>
 								<div><?php echo $speaker->title?></div>

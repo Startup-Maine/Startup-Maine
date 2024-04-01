@@ -1,8 +1,6 @@
 <?php
 get_header();
 
-$searching = !empty($_GET['search']);
-
 $open = explode(',', $_COOKIE['schedule']) ?: array('monday');
 
 $days = array(
@@ -11,9 +9,8 @@ $days = array(
 	'Wednesday' => array(),
 	'Thursday' => array(),
 	'Friday' => array(),
+    'Saturday' => array(),
 );
-
-//get all the speakers, think it's more efficient this way
 $speakers = get_posts(array(
 	'post_type' => 'speaker',
 	'numberposts' => -1,
@@ -28,35 +25,6 @@ foreach ($speakers as $speaker) {
 	}
 }
 
-//searching
-$include = array();
-if ($searching) {
-	
-	//search sessions
-	$sessions = get_posts(array(
-		'post_type' => 'session',
-		'numberposts' => -1,
-		's' => sanitize_text_field($_GET['search']),
-		'fields' => 'ids',
-	));
-	
-	//also search speakers 
-	$speakers = get_posts(array(
-		'post_type' => 'speaker',
-		'numberposts' => -1,
-		's' => sanitize_text_field($_GET['search']),
-		'fields' => 'ids',
-	));
-	
-	foreach ($speakers as $speaker) {
-		foreach (get_field('sessions', $speaker) as $session) {
-			$sessions[] = $session->ID;
-		}
-	}
-	
-	$include = array_unique(array_merge($sessions, $speakers));
-	
-}
 
 $sessions = get_posts(array(
 	'post_type' => 'session',
@@ -77,6 +45,7 @@ foreach ($sessions as $session) {
 	$session->venue = get_field('venue', $session);
 	$session->link = get_permalink($session);
 	$session->speakers = isset($session_speakers[$session->ID]) ? implode(', ', $session_speakers[$session->ID]) : null;
+    $session->program_note = get_field('program_note', $session);
 	
 	//day not valid for some reason
 	if (!array_key_exists($session->day, $days)) continue;
@@ -95,45 +64,32 @@ foreach ($sessions as $session) {
 ?>
 
 <div class="container" id="program">
-	<div class="row">
-		<div class="col-md-2 col-md-push-10">
-			<form id="program-search">
-				<label for="search">Search</label>
-				<input type="search" name="search" value="<?php echo $_GET['search']?>">
-			</form>
-		</div>
-		<div class="col-md-9 col-md-pull-2 col-md-offset-1">
-			<?php if ($searching) {?>
-			<small>Searching Schedule for '<?php echo $_GET['search']?>'</small>
-			<?php } else {?>
-			<small>
-				Schedule
-				<?php if ($schedule_pdf = get_field('schedule_pdf', 'options')) {?>
-					<a href="<?php echo $schedule_pdf?>">PDF View</a>
-				<?php }?>
-			</small>
-			<?php }?>
-			<div id="schedule">
+	
+        <h1>Maine Startup Week 2024</h1>
+        <p><em>Program schedule subject to change</em></p>
+			<a href="https://events.humanitix.com/maine-startup-week/tickets" style="border-radius:4px;background:#353337;font-family: Helvetica;font-size:16px;color:#FFFFFF;text-align:center;padding: 4px 18px;text-decoration: none;display: inline-block;">Purchase Week Pass</a>
+<div id="schedule">
 			<?php foreach ($days as $day => $slots) {
 				if (empty($slots)) continue;
 				ksort($slots);
 				$key = sanitize_title($day);
 				?>
-				<h1 data-toggle="collapse" data-parent="#schedule" href="#<?php echo $key?>"><?php echo $day?></h1>
-				<div class="collapse<?php if ($searching || in_array($key, $open)) {?> in<?php }?>" id="<?php echo $key?>">
+				<h1 data-parent="#schedule" href="#<?php echo $key?>"><?php echo $day?></h1>
+				<div  id="<?php echo $key?>">
 				<?php foreach ($slots as $key => $sessions) {
 					list ($start, $end, $type) = explode('|', $key);
 					?>
 				<div class="slot">
 					<div class="info">
 						<h3><?php echo mscw_time_range($start, $end)?></h3>
-						<?php if (!empty($type)) {?><small><?php echo $type?><?php if (count($sessions) > 1) echo 's'?></small><?php }?>
+						<?php if (!empty($type)) {?><small><?php echo $type?></small><?php }?>
 					</div>
 					<?php foreach ($sessions as $session) {?>
 						<div class="session <?php echo sanitize_title_with_dashes($session->type)?>">
 							<div class="inner">
 								<small><?php echo $session->venue?></small>
 								<a href="<?php echo $session->link?>" class="title"><?php echo $session->post_title?></a>
+                      			<small><?php echo $session->program_note?></small>
 								<?php echo $session->speakers?>
 							</div>
 						</div>
@@ -145,8 +101,6 @@ foreach ($sessions as $session) {
 				$one_open = true;
 			}?>
 			</div>
-		</div>
-	</div>
 </div>
 
 <?php
