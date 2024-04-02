@@ -1,9 +1,10 @@
 node_modules
-assets/fonts
+resources/fonts
 fonts
 .DS_Store
 yarn-error.log
-assets/js
-assets/css
+resources/js
+resources/css
 images
 *.zip
+vendor

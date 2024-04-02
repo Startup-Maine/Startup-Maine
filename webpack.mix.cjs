@@ -1,4 +1,7 @@
 const mix = require('laravel-mix');
+mix.options = {
+	
+}
 
 mix.sass('./assets/styles/editor.scss', './assets/css/editor.css');
 mix.sass('./assets/styles/main.scss',   './assets/css/main.css');
