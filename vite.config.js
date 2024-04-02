@@ -9,9 +9,8 @@ export default defineConfig({
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/jquery-ui-dist/jquery-ui.js',
             './node_modules/bootstrap/dist/js/bootstrap.min.js',
-            './node_modules/js-cookie/dist/js.cookie.js',
             './node_modules/lazysizes/lazysizes.min.js',
-            './resources/scripts/main.js',
+            '@/main.js',
         ]),
     ],
 });
