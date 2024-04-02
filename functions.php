@@ -120,9 +120,3 @@ class mscw_social_icons extends Walker_Nav_Menu {
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }
-
-function lazyLoadImages() {
-    wp_register_script( 'lazyLoading', '/wp-content/themes/mscw/assets/js/lazysizes.min.js', array(), null, true );
-    wp_enqueue_script('lazyLoading');
-}
-add_action('wp_enqueue_scripts', 'lazyLoadImages');

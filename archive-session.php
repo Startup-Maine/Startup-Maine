@@ -1,8 +1,6 @@
 <?php
 get_header();
 
-$open = explode(',', $_COOKIE['schedule']) ?: array('monday');
-
 $days = array(
 	'Monday' => array(),
 	'Tuesday' => array(),

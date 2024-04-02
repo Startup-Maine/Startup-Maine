@@ -1,0 +1,395 @@
+header {
+  padding-top: 30px;
+  padding-bottom: 140px;
+  background-image: url("https://www.startupmaine.org/wp-content/uploads/2018/03/main-image.jpg");
+  background-size: cover;
+}
+#utility {
+  display: none;
+}
+header form label {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+header #menu-header-menu {
+  color: #fff;
+}
+header #menu-header-menu li {
+  color: #fff;
+}
+header #menu-header-menu li a {
+  font-size: 1.8em;
+}
+header #menu-header-menu li + li:before {
+  font-size: 30px;
+}
+header #logo {
+  background-image: url("https://www.startupmaine.org/wp-content/uploads/2019/02/web-logo-2019Artboard-1@2x.png");
+  width: 450px;
+  height: 350px;
+  padding: 0px;
+  margin: 0 50px;
+}
+
+/*** GLOBAL***/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+label {
+  font-family: "proxima nova", "source sans pro", sans-serif;
+  font-weight: 600;
+  color: #003a5d;
+}
+h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+h2,
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.4em;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+p,
+label {
+  font-weight: 400;
+}
+ul {
+  padding-bottom: 10px;
+}
+body {
+  background-color: #fff;
+  max-width: 100;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1250px;
+  width: 100%;
+}
+hr,
+.post {
+  border-top: 2px solid #eee;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.button,
+.button2 {
+  margin-top: 50px;
+  letter-spacing: 2px !important;
+}
+.button a,
+.button2 a {
+  padding: 20px 60px;
+  background-color: #d6de23;
+  text-transform: uppercase;
+  font-family: font-mono;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+.button a:hover {
+  color: #fff;
+  background-color: #003a5d;
+}
+.button2 a {
+  color: #fff;
+  background-color: #003a5d;
+}
+.button2 a:hover {
+  color: #003a5d;
+  background-color: #d6de23;
+}
+#home .sponsors {
+  display: none;
+}
+#home .sponsors .tier {
+  border-bottom: 2px solid #eee;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/*** FORMS ***/
+
+.wpcf7 input,
+.wpcf7 textarea {
+  background-color: #fff;
+  border: 0;
+  border-bottom: 2px solid #d6de23;
+}
+.wpcf7 input.wpcf7-submit,
+.wpcf7 textarea.wpcf7-submit {
+  border: 2px solid #003a5d;
+  padding: 13px 60px;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 25px;
+}
+.wpcf7 input.wpcf7-submit:hover,
+.wpcf7 textarea.wpcf7-submit:hover {
+  color: #fff;
+  background: #003a5d;
+}
+
+/*** HOMEPAGE***/
+
+#home .hero {
+  background-color: #fff;
+}
+#home .carousel {
+  margin-top: -130px;
+}
+#home .carousel .item .caption {
+  padding: 6%;
+}
+#home .carousel .item .caption h1,
+h2 {
+  color: #fff;
+  font-size: 2.4em;
+  font-weight: 600;
+}
+#home .carousel .item .caption p {
+  color: #d6de23;
+}
+#home .carousel .carousel-control {
+  color: #d6de23;
+}
+div.intro {
+  padding-top: 40px;
+  padding-bottom: 15px;
+  margin-bottom: 100px;
+  background: url("https://www.startupmaine.org/wp-content/uploads/2018/03/line-graphic-Artboard-3@4x.png")
+    top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+h1.giant {
+  font-size: 4em;
+  letter-spacing: -5px;
+  font-weight: 700;
+}
+p.large {
+  max-width: 800px;
+  font-size: 1em;
+}
+div.call-to-action {
+  background-color: #003a5d;
+  padding: 10%;
+  text-align: center;
+  color: #fff;
+  background-image: url("https://www.startupmaine.org/wp-content/uploads/2018/03/ca-backgroundArtboard-4@2x-50.jpg");
+  background-size: cover;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 0.9em;
+}
+div.call-to-action h2,
+div.call-to-action p {
+  color: #fff;
+}
+div.call-to-action h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+#home .testimonials {
+  display: none;
+}
+
+/*** POSTS PAGE***/
+
+.post {
+  padding: 40px;
+  padding-bottom: 0px;
+}
+.post h4 {
+  text-transform: none;
+  font-size: 2.5em;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  letter-spacing: -1px;
+}
+.post small {
+  color: #d6de23;
+}
+
+/*** SPEAKERS PAGE ***/
+
+#people,
+#program {
+  margin-top: -100px;
+  background: #fff;
+  padding-top: 40px;
+}
+@media (min-width: 992px) {
+  #people .col-md-2 {
+    width: 50%;
+  }
+}
+.speaker-img {
+  background-position: 100% 5% !important;
+}
+
+/*** SCHEDULE PAGE ***/
+
+#program small a {
+  display: none;
+}
+#program form#program-search {
+  background-color: #003a5d;
+  border-radius: 5px;
+  min-height: 0 !important;
+}
+#detail {
+  background-color: #fff;
+}
+#detail,
+#detail a {
+  color: #003a5d;
+}
+
+/*** FOOTER TABS ***/
+
+nav#footer #menu-tab-menu {
+  padding: 15px 30px;
+}
+nav#footer #menu-tab-menu a,
+small {
+}
+@media (min-width: 768px) {
+  body.yellow #footer {
+    background-color: transparent;
+    margin-top: -100px;
+  }
+}
+main#secondary {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*** FOOTER ***/
+footer p {
+  border-top: 0;
+  display: none;
+}
+
+.schedule-pdf-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-pdf-btn {
+  background-color: #003a5d;
+  padding: 10px;
+  color: white;
+  border: 2px solid #d6de23;
+  width: 250px;
+  text-align: center;
+  margin: 5px;
+}
+
+.schedule-pdf-btn:hover {
+  background-color: white;
+  color: #003a5d;
+  border: 2px solid #003a5d;
+}
+#home .sponsors .tier .row > div.Presenting {
+  width: 50%;
+}
+#home .sponsors .tier .row > div.Presenting img {
+  width: 95%;
+  max-height: none;
+}
+#home .sponsors .tier .row > div.Platinum {
+  width: 50%;
+}
+#home .sponsors .tier .row > div.Platinum img {
+  width: 55%;
+  max-height: none;
+}
+
+/*** RESPONSIVE***/
+
+@media (max-width: 450px) {
+  header #logo {
+    max-width: 100%;
+    margin: 0;
+    height: 280px;
+  }
+  header #menu-header-menu li a {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 1em;
+  }
+  #home .carousel .carousel-control {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #home .carousel .carousel-control span {
+    margin-left: -5px;
+  }
+  #home .carousel .carousel-control.right {
+    right: -70px;
+  }
+  /*** SCHEDULE AFFILS ***/
+  #program #schedule .slot .session.affiliate-event,
+  #program #schedule .slot .session.lightning-workshop {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  header form {
+    display: none;
+  }
+  header h1#logo {
+    width: 100%;
+  }
+  #mc-embedded-subscribe-form {
+    width: 100%;
+  }
+  #mc_embed_signup input.email {
+    width: 100%;
+  }
+  header #menu-header-menu li + li {
+    line-height: 30px;
+  }
+  .blog .col-xs-3 {
+    width: 100%;
+  }
+  .blog .col-xs-9 h4 {
+    font-size: 1.5em;
+  }
+  #home .sponsors .tier .row > div.Presenting {
+    width: 100%;
+  }
+  #home .sponsors .tier .row > div.Platinum {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+    margin-left: 4%;
+  }
+  .col-md-10 {
+    width: 92%;
+  }
+  .col-md-5 {
+    width: 47%;
+  }
+}

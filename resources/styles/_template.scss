@@ -173,48 +173,6 @@ footer {
 	}
 }
 
-#circle, #triangle {
-	display: none;
-	position: fixed;
-	opacity: 0;
-	cursor: move;
-	transition: linear opacity .1s;
-	&.loaded {
-		opacity: 1;
-	}
-	.shape { opacity: .8; }
-	&:hover .shape { opacity: 1; }
-}
-
-#triangle {
-	left: -20px;
-	bottom: 150px;
-	width: $triangle-width * .8;
-	height: $triangle-height * .8;
-	.shape {
-		border-style: solid;
-		border-width: 0 $triangle-width * .8 / 2 $triangle-height * .8;
-		border-color: transparent transparent $color-green transparent;
-		height: 0;
-		width: 0;
-	}
-	.text {
-		color: $color-white;
-		font-size: 16px;
-		font-family: 'font-mono';
-		margin: 0 auto;
-		position: absolute;
-		text-align: center;
-		top: $triangle-height * .8 / 2;
-		width: 100%;
-		a {
-			font-family: 'font-bold';
-			color: $color-white;
-			text-decoration: underline;
-		}
-	}
-}
-
 .speaker-img {
 	width: 100%;
 	padding-bottom: 100%;
@@ -223,7 +181,7 @@ footer {
 	margin-bottom: 5px;	
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: 30em) {
 	body {
 		&.admin-bar #utility {
 			top: 32px;
@@ -240,76 +198,6 @@ footer {
 	}
 	header h1#logo {
 		width: 100%;
-	}
-	#circle, #triangle {
-		display: block;
-	}
-	#triangle {
-		width: $triangle-width;
-		height: $triangle-height;
-		.shape {
-			border-width: 0 $triangle-width / 2 $triangle-height;
-		}
-		.text {
-			font-size: 18px;
-			top: $triangle-height / 2;
-		}
-	}
-	#circle {
-		right: -20px;
-		top: 260px;
-		width: $circle-width;
-		height: $circle-width;
-		border-radius: $circle-width / 2;
-		overflow: hidden;
-		.shape {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background-color: $color-pink;
-		}
-		a {
-			position: absolute;
-			left: $circle-width / 5;
-			right: $circle-width / 5;
-			top: $circle-width / 5;
-			bottom: $circle-width / 5;
-			font-size: 19px;
-			font-family: 'font-bold';
-			overflow: hidden;
-			text-align: center;
-			line-height: $circle-width * 3 / 5;
-			color: inherit;
-			span {
-				display: inline-block;
-				vertical-align: middle;
-				line-height: normal;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-		small {
-			font-family: 'font-mono';
-			font-size: 14px;
-			position: absolute;
-			left: $circle-width / 5;
-			right: $circle-width / 5;
-			top: ($circle-width / 5) - 24;
-			text-align: center;
-		}
-		.move {
-			color: #999;
-			text-transform: uppercase;
-			font-family: 'font-mono';
-			font-size: 9pt;
-			transform: rotate(-45deg);
-			position: absolute;
-			top: 41px;
-			left: 23px;
-		}
 	}
 	nav {
 		&#utility {
@@ -353,10 +241,4 @@ footer {
 			}
 		}
 	}
-}
-
-@media (min-width: $screen-md-min) {
-}
-
-@media (min-width: $screen-lg-min) {
 }

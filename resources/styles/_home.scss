@@ -95,7 +95,7 @@
 		}
 	}
 	
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: 30em) {
 		.carousel {
 			.item { 
 				height: 405px; 
@@ -135,14 +135,14 @@
 		}
 	}
 	
-	@media (min-width: $screen-md-min) {
+	@media (min-width: 60em) {
 		.carousel .item {
 			height: 438px;
 			iframe { height: 438px; }
 		}
 	}
 	
-	@media (min-width: $screen-lg-min) {
+	@media (min-width: 120em) {
 		.carousel .item {
 			height: 532px;
 			iframe { height: 532px; }
