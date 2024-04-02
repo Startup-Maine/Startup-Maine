@@ -1,8 +1,12 @@
 node_modules: package.json yarn.lock
 	yarn install
 
+dev:
+	yarn vite dev
+.PHONY: dev
+
 build:
-	yarn exec mix
+	yarn vite build
 .PHONY: build
 
 zip:
