@@ -2,20 +2,16 @@
 get_header();
 
 $days = array(
-	'Monday' => array(),
 	'Tuesday' => array(),
 	'Wednesday' => array(),
 	'Thursday' => array(),
 	'Friday' => array(),
-	'Saturday' => array(),
 );
 $dates = array(
-	'Monday' => 'May 13',
 	'Tuesday' => 'May 14',
 	'Wednesday' => 'May 15',
 	'Thursday' => 'May 16',
 	'Friday' => 'May 17',
-	'Saturday' => 'May 18',
 );
 $speakers = get_posts(array(
 	'post_type' => 'speaker',
