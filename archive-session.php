@@ -64,22 +64,25 @@ foreach ($sessions as $session) {
 		<h1>Startup Maine Week</h1>
 		<h3>May 14-17, 2024</h3>
 		<p>Join us for expert insight, skill building, and meaningful connections to make big things happen. Week passes are only $39 ($10 for students). Sales support programming by Startup Maine, a 501c3 organization.</p>
+		<div>
+			<p>Daily schedules: <?php foreach ($days as $day => $slots) {
+									if (empty($slots)) continue;
+									$key = sanitize_title($day);
+								?>
+					<a href="#<?php echo $key ?>"><?php echo $day ?></a>
+				<?php } ?>
+			</p>
+
+		</div>
 		<p><em>Program schedule subject to change</em></p>
 		<a href="https://events.humanitix.com/maine-startup-week/tickets" style="border-radius:4px;background:#353337;font-family: Helvetica;font-size:16px;color:#FFFFFF;text-align:center;padding: 4px 18px;text-decoration: none;display: inline-block;">
 			Purchase Week Pass
 		</a>
-		<br/>
-		<div><a href="#map">Scroll to venue and session map</a></div>
-		<br/>
-		<div>
-			<?php foreach ($days as $day => $slots) {
-				if (empty($slots)) continue;
-				$key = sanitize_title($day);
-			?>
-				<a href="#<?php echo $key ?>"><?php echo $day ?></a>
-			<?php } ?>
-		</div>
-		
+		<a href="#map" style="border-radius:4px;background:#353337;font-family: Helvetica;font-size:16px;color:#FFFFFF;text-align:center;padding: 4px 18px;text-decoration: none;display: inline-block;">
+			Venue and Session Map
+		</a>
+
+
 	</div>
 	<div id="schedule">
 		<?php foreach ($days as $day => $slots) {
@@ -116,7 +119,7 @@ foreach ($sessions as $session) {
 		<?php } ?>
 	</div>
 	<div id="map">
-		<img style="width:100%;" src="https://content.slicpix.com/messages/349877784232854248"></img>
+		<img style="width:100%;" src="/wp-content/uploads/2024/05/startupmaine.webp"></img>
 	</div>
 </div>
 <?php
